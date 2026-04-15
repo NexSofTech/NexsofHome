@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "service": "Dienste",
+    "expertise": "Expertise",
+    "industries": "Branchen",
+    "technologies": "Technologien",
+    "about": "Über uns",
+    "blog": "Blog",
+    "cta": "Kontakt"
+  },
+  "hero": {
+    "badge": "Vertraut von +25.000 Unternehmen",
+    "title": "Apps & Websites der nächsten Generation,",
+    "titleHighlight": "KI-gestützt",
+    "subtitle": "Softfix",
+    "subtitleSuffix": "– Individuelle Softwareentwicklung",
+    "feature1": "End-to-End-Softwareentwicklung nach Ihren Vorstellungen.",
+    "feature2": "KI-gesteuerte Lösungen, die mit Ihrem Unternehmen wachsen.",
+    "feature3": "Agile Teams, die pünktlich liefern – jedes Mal.",
+    "feature4": "Von der Idee bis zum Launch – wir sind dabei.",
+    "ctaPrimary": "Loslegen",
+    "ctaPhone": "+91-8189010044"
+  },
+  "trusted": {
+    "label": "VERTRAUT VON +25.000 UNTERNEHMEN"
+  },
+  "endToEnd": {
+    "eyebrow": "End-to-End-Lösungen :",
+    "heading": "Individuelle Entwicklung und digitales Marketing",
+    "description": "Wir entwickeln maßgeschneiderte Software, Websites und Apps, die Ihren Geschäftsanforderungen entsprechen, während clevere Marketingstrategien Ihre Online-Präsenz stärken."
+  },
+  "services": {
+    "heading": "Unsere Kernleistungen",
+    "description": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie.",
+    "bannerTitle": "Bereit für Ihre digitale Transformation?",
+    "bannerDesc": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie.",
+    "bannerCta": "Jetzt besuchen"
+  },
+  "team": {
+    "headingA": "Lorem Ipsum ist einfach ein Blindtext der Druckindustrie",
+    "descriptionA": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie.",
+    "featureA1": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie.",
+    "featureA2": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie.",
+    "headingB": "Softfix",
+    "subheadingB": "Individuelle Softwareentwicklung",
+    "descriptionB": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie."
+  }
+}

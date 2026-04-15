@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "home": "Home",
+    "service": "Service",
+    "expertise": "Expertise",
+    "industries": "Industries",
+    "technologies": "Technologies",
+    "about": "About",
+    "blog": "Blog",
+    "cta": "Get in Touch"
+  },
+  "hero": {
+    "badge": "Trusted by +25,000 Businesses",
+    "title": "Next-Gen Apps & Websites,",
+    "titleHighlight": "AI-Powered",
+    "subtitle": "Softfix",
+    "subtitleSuffix": "– Custom Software Development Company",
+    "feature1": "End-to-end software development tailored to your vision.",
+    "feature2": "AI-driven solutions that scale with your business.",
+    "feature3": "Agile teams delivering on time, every time.",
+    "feature4": "From idea to launch — we've got you covered.",
+    "ctaPrimary": "Get Started",
+    "ctaPhone": "+91-8189010044"
+  },
+  "trusted": {
+    "label": "TRUSTED BY +25,000 BUSINESSES"
+  },
+  "endToEnd": {
+    "eyebrow": "End-to-End Solutions :",
+    "heading": "Custom Development and Digital Marketing",
+    "description": "We create custom software, websites, and apps that suit your business requirements, while smart digital marketing strategies help grow your online presence and deliver demonstrated results."
+  },
+  "services": {
+    "heading": "Our Core Services",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book, a galley of type and scrambled it to make.",
+    "bannerTitle": "Ready to Start Your Digital Transformation?",
+    "bannerDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown object, when an unknown printer took a galley.",
+    "bannerCta": "Visit Now"
+  },
+  "team": {
+    "headingA": "Lorem Ipsum is simply dummy text of the printing",
+    "descriptionA": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a specimen.",
+    "featureA1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.",
+    "featureA2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.",
+    "headingB": "Softfix",
+    "subheadingB": "Custom Software Development",
+    "descriptionB": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
+  }
+}

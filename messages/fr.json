@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "service": "Services",
+    "expertise": "Expertise",
+    "industries": "Industries",
+    "technologies": "Technologies",
+    "about": "À propos",
+    "blog": "Blog",
+    "cta": "Contactez-nous"
+  },
+  "hero": {
+    "badge": "Approuvé par +25 000 entreprises",
+    "title": "Applications & Sites Web nouvelle génération,",
+    "titleHighlight": "propulsés par l'IA",
+    "subtitle": "Softfix",
+    "subtitleSuffix": "– Société de développement logiciel sur mesure",
+    "feature1": "Développement logiciel de bout en bout adapté à votre vision.",
+    "feature2": "Solutions pilotées par l'IA qui évoluent avec votre entreprise.",
+    "feature3": "Équipes agiles livrant dans les délais, à chaque fois.",
+    "feature4": "De l'idée au lancement — nous vous accompagnons.",
+    "ctaPrimary": "Commencer",
+    "ctaPhone": "+91-8189010044"
+  },
+  "trusted": {
+    "label": "APPROUVÉ PAR +25 000 ENTREPRISES"
+  },
+  "endToEnd": {
+    "eyebrow": "Solutions de bout en bout :",
+    "heading": "Développement sur mesure et Marketing Digital",
+    "description": "Nous créons des logiciels, sites web et applications personnalisés adaptés à vos besoins, tandis que nos stratégies de marketing digital font croître votre présence en ligne."
+  },
+  "services": {
+    "heading": "Nos Services Principaux",
+    "description": "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.",
+    "bannerTitle": "Prêt à lancer votre transformation digitale ?",
+    "bannerDesc": "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.",
+    "bannerCta": "Visiter maintenant"
+  },
+  "team": {
+    "headingA": "Lorem Ipsum est simplement du faux texte de l'imprimerie",
+    "descriptionA": "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.",
+    "featureA1": "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.",
+    "featureA2": "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.",
+    "headingB": "Softfix",
+    "subheadingB": "Développement logiciel sur mesure",
+    "descriptionB": "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression."
+  }
+}
