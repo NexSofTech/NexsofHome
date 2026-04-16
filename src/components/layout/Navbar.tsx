@@ -18,15 +18,8 @@ export function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const router = useRouter();
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const currentLocale = pathname.split("/")[1] || "en";
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const switchLocale = (locale: string) => {
     const segments = pathname.split("/");
@@ -35,31 +28,11 @@ export function Navbar() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 px-6 h-[68px] flex items-center transition-all duration-300 ${
-        scrolled
-          ? "bg-dark-900/85 backdrop-blur-xl shadow-[0_1px_0_rgba(168,85,247,0.15)]"
-          : ""
-      }`}
-    >
+    <header className="relative w-full z-50 px-6 md:px-10 h-[88px] flex items-center bg-transparent">
       <div className="max-w-[1280px] w-full mx-auto flex items-center gap-8">
         {/* Logo */}
-        <a href="#" id="logo" className="flex items-center gap-2 shrink-0">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2L18 7V13L10 18L2 13V7L10 2Z" fill="url(#lg)" />
-            <defs>
-              <linearGradient id="lg" x1="2" y1="2" x2="18" y2="18">
-                <stop stopColor="#e040fb" />
-                <stop offset="1" stopColor="#a855f7" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <span
-            style={{ fontFamily: "Outfit, sans-serif" }}
-            className="font-extrabold text-[1.1rem] tracking-[0.08em] bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent"
-          >
-            SOFTFIX
-          </span>
+        <a href="#" id="logo" className="flex items-center shrink-0">
+          <img src="/logo.png" alt="nexsof.tech logo" className="h-[28px] object-contain" />
         </a>
 
         {/* Desktop nav */}

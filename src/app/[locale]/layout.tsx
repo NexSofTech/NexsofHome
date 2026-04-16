@@ -28,10 +28,10 @@ export default async function LocaleLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Softfix – Custom Software Development Company</title>
+        <title>nexsof.tech – Custom Software Development Company</title>
         <meta
           name="description"
-          content="Softfix builds next-gen AI-powered apps and websites for 25,000+ businesses worldwide."
+          content="nexsof.tech builds next-gen AI-powered apps and websites for 25,000+ businesses worldwide."
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

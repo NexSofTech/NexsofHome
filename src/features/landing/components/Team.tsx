@@ -50,7 +50,7 @@ export function Team() {
             <div className="h-full">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
-                alt="Softfix team"
+                alt="nexsof.tech team"
                 className="w-full h-full min-h-[300px] object-cover rounded-tl-[6rem] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl shadow-lg"
               />
             </div>
@@ -132,3 +132,4 @@ export function Team() {
     </section>
   );
 }
+
