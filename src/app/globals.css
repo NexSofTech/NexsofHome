@@ -10,8 +10,8 @@
   --color-dark-card:     #120018;
   --color-section-light: #f8f7ff;
 
-  --font-sans:    "Outfit", system-ui, -apple-system, sans-serif;
-  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans:    "Raleway", system-ui, -apple-system, sans-serif;
+  --font-display: "Raleway", system-ui, sans-serif;
 }
 
 /* ── Base ─────────────────────────────────────────────── */
@@ -130,8 +130,8 @@ button { cursor: pointer; font-family: inherit; }
 
 /* ── Ticker ───────────────────────────────────────────── */
 .ticker-track {
-  display: inline-flex;
-  gap: 3rem;
+  display: flex;
+  width: max-content;
   white-space: nowrap;
   animation: tickerScroll 30s linear infinite;
 }

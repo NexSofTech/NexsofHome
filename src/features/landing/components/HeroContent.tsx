@@ -25,7 +25,7 @@ function DeviceMockup() {
       <span className="absolute w-5 h-5 rounded-full bg-brand-purple shadow-lg -bottom-2 right-8 opacity-60" />
 
       {/* Main purple gradient card */}
-      <div className="absolute right-0 bottom-0 w-[85%] h-[90%] bg-gradient-to-br from-[#802273] via-[#4d2165] to-[#251b3f] rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+      <div className="absolute right-0 bottom-0 w-[85%] h-[90%] bg-gradient-to-br from-[#802273] via-[#4d2165] to-[#251b3f] rounded-3xl">
         
         {/* White phone mockup */}
         <div className="absolute right-6 bottom-0 w-[140px] h-[85%] bg-white rounded-t-3xl shadow-2xl overflow-hidden border border-white/20">

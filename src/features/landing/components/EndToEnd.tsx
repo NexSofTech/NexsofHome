@@ -1,99 +1,77 @@
 import { useTranslations } from "next-intl";
 
-const SERVICES = [
-  {
-    title: "Web Development",
-    desc: "We craft high-performance websites tailored to your brand — from landing pages to complex web platforms.",
-  },
-  {
-    title: "Mobile App Development",
-    desc: "Native and cross-platform mobile apps designed for seamless user experiences on iOS and Android.",
-  },
-  {
-    title: "UI/UX Design",
-    desc: "Pixel-perfect interfaces backed by user research, ensuring intuitive and beautiful digital products.",
-  },
-  {
-    title: "Cloud Services",
-    desc: "Scalable cloud infrastructure setup, migration, and management across AWS, GCP, and Azure.",
-  },
-  {
-    title: "AI & Machine Learning",
-    desc: "Smart AI-driven features — chatbots, recommendation engines, and predictive analytics — built into your product.",
-  },
-  {
-    title: "DevOps & CI/CD",
-    desc: "Automated pipelines and infrastructure-as-code practices for faster, reliable deployments.",
-  },
-  {
-    title: "Custom Software",
-    desc: "Bespoke software solutions engineered from scratch to solve your unique business challenges.",
-  },
-  {
-    title: "E-Commerce Solutions",
-    desc: "Full-featured online stores with seamless payment integrations, inventory management, and analytics.",
-  },
-  {
-    title: "Digital Marketing",
-    desc: "Data-driven digital marketing strategies that grow your online presence and convert visitors into customers.",
-  },
-  {
-    title: "SEO Optimization",
-    desc: "Technical SEO audits and on-page optimization to push your brand to the top of search results.",
-  },
-  {
-    title: "Cybersecurity",
-    desc: "Security audits, penetration testing, and compliance consulting to keep your systems secure.",
-  },
-  {
-    title: "IT Consulting",
-    desc: "Strategic technology consulting to align your IT roadmap with your business objectives.",
-  },
-];
+const SERVICES = Array(9).fill({
+  title: "Lorem Ipsum",
+  desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+});
 
 export function EndToEnd() {
   const t = useTranslations("endToEnd");
 
   return (
-    <section className="bg-[#f8f9fe] py-16 px-6 relative overflow-hidden" id="expertise">
-      {/* Sharp vector bottom-right blob */}
-      <div className="absolute right-0 bottom-[-50px] w-64 h-64 rounded-full bg-gradient-to-br from-[#7780df] via-[#9176db] to-[#e47ae2] translate-x-1/2 opacity-90 z-0" />
+    <section className="bg-white py-24 px-6 relative overflow-hidden" id="expertise">
+      {/* Background Orbs */}
+      <div className="absolute top-[2%] left-[4%] w-32 h-32 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] opacity-90 z-0 pointer-events-none"></div>
+      <div className="absolute top-[5%] left-[45%] w-48 h-48 rounded-full bg-linear-to-r from-[#8b5cf6] to-[#3b82f6] opacity-80 z-0 pointer-events-none"></div>
+      <div className="absolute top-[35%] left-[-5%] w-60 h-60 rounded-full bg-linear-to-tr from-[#ec4899] to-[#8b5cf6] opacity-90 z-0 pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[45rem] h-[45rem] rounded-full bg-linear-to-bl from-[#a855f7] via-[#6366f1] to-transparent opacity-80 z-0 pointer-events-none"></div>
 
-      <div className="max-w-[1240px] mx-auto relative z-10">
-        {/* Heading */}
-        <div className="mb-10 flex gap-2 flex-wrap items-baseline">
-          <h2
-            className="text-2xl md:text-3xl font-bold text-gray-800"
-            style={{ fontFamily: "Outfit, sans-serif" }}
-          >
-            {t("eyebrow")}
-          </h2>
-          <h2
-            className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent"
-            style={{ fontFamily: "Outfit, sans-serif" }}
-          >
-            {t("heading")}
-          </h2>
-          <p className="w-full text-gray-500 text-[0.9rem] leading-relaxed max-w-3xl mt-4">
-            {t("description")}
-          </p>
+      <div className="max-w-[1600] mx-auto relative z-10">
+        {/* Top Module */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
+          {/* Image */}
+          <div className="relative">
+            <img 
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" 
+              alt="Team at work" 
+              className="w-full h-auto rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] object-cover"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="flex flex-col items-start lg:pr-8">
+            <div className="inline-block bg-linear-to-r from-[#e1b2e8] to-[#ffffff] px-4 py-2 rounded-md mb-6">
+              <span className="text-gray-900 font-extrabold text-[0.8rem] uppercase tracking-wide">Lorem Ipsum Text Is Use Like Dummy Text</span>
+            </div>
+            
+            <h2 
+              className="text-4xl md:text-[3rem] font-bold text-gray-900 leading-[1.1] mb-6"
+              style={{ fontFamily: "Outfit, sans-serif" }}
+            >
+              Next-Gen Apps & Websites &<br/>Applications
+            </h2>
+
+            <div className="w-full h-[1px] bg-gray-300 mb-8"></div>
+
+            <p className="text-gray-600 text-[0.95rem] leading-relaxed mb-10">
+              We create custom software, websites, and apps that suit your business requirements, while smart digital marketing strategies help grow your online presence and deliver demonstrated results.
+            </p>
+
+            <button className="bg-linear-to-r from-[#e879f9] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+              Get Started
+            </button>
+          </div>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {SERVICES.map((service, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-md border-[1.5px] border-[#f0c1f2] p-5 shadow-sm hover:-translate-y-0.5 transition-transform"
-            >
-              <div className="mb-4">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="opacity-70">
-                  <rect x="2" y="3" width="20" height="14" rx="2" stroke="#111" strokeWidth="1.5" />
-                  <path d="M8 21h8M12 17v4" stroke="#111" strokeWidth="1.5" strokeLinecap="round" />
+            <div key={i} className="flex flex-col p-8 rounded-3xl border border-transparent hover:border-[#f0c1f2] hover:bg-white/80 hover:shadow-[0_15px_40px_rgb(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer backdrop-blur-sm">
+              <div className="mb-6">
+                {/* SVG Icon resembling the code + gear from screenshot */}
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 17L4 7C4 5.89543 4.89543 5 6 5L17 5C18.1046 5 19 5.89543 19 7L19 17C19 18.1046 18.1046 19 17 19L6 19C4.89543 19 4 18.1046 4 17Z" stroke="#111" strokeWidth="1.5"/>
+                  <path d="M9 10L7 12L9 14" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M14 10L16 12L14 14" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12.5 9L10.5 15" stroke="#111" strokeWidth="1.5" strokeLinecap="round"/>
+                  
+                  {/* Gear overlay */}
+                  <circle cx="18" cy="6" r="3.5" fill="white" stroke="#111" strokeWidth="1.5"/>
+                  <circle cx="18" cy="6" r="1.5" fill="#111"/>
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-900 text-[0.9rem] mb-2 font-sans">{service.title}</h3>
-              <p className="text-gray-500 text-[0.8rem] leading-snug">{service.desc}</p>
+              <h3 className="font-extrabold text-gray-900 text-[1.2rem] mb-3">{service.title}</h3>
+              <p className="text-gray-600 text-[0.85rem] leading-[1.7] opacity-90">{service.desc}</p>
             </div>
           ))}
         </div>
