@@ -4,6 +4,7 @@ import {
   EndToEnd,
   Services,
   Team,
+  Conversion,
 } from "@/features/landing";
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       </div>
 
       <EndToEnd />
+      <Conversion />
       <Services />
       <Team />
 

@@ -10,13 +10,15 @@ export function EndToEnd() {
 
   return (
     <section className="bg-white py-24 px-6 relative overflow-hidden" id="expertise">
-      {/* Background Orbs */}
-      <div className="absolute top-[2%] left-[4%] w-32 h-32 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] opacity-90 z-0 pointer-events-none"></div>
-      <div className="absolute top-[5%] left-[45%] w-48 h-48 rounded-full bg-linear-to-r from-[#8b5cf6] to-[#3b82f6] opacity-80 z-0 pointer-events-none"></div>
-      <div className="absolute top-[35%] left-[-5%] w-60 h-60 rounded-full bg-linear-to-tr from-[#ec4899] to-[#8b5cf6] opacity-90 z-0 pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[45rem] h-[45rem] rounded-full bg-linear-to-bl from-[#a855f7] via-[#6366f1] to-transparent opacity-80 z-0 pointer-events-none"></div>
+      {/* Background Orbs pinned to max-width container */}
+      <div className="absolute inset-0 mx-auto max-w-[1600px] pointer-events-none z-0">
+        <div className="absolute top-[60px] -left-[35px] w-16 h-16 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] opacity-90"></div>
+        <div className="absolute top-[30px] right-[50%] w-24 h-24 rounded-full bg-linear-to-r from-[#8b5cf6] to-[#3b82f6] opacity-80"></div>
+        <div className="absolute top-[35%] -left-[300px] w-60 h-60 rounded-full bg-linear-to-tr from-[#ec4899] to-[#8b5cf6] opacity-90"></div>
+        <div className="absolute -bottom-[0px] -right-[400px] w-[25rem] h-[25rem] rounded-full bg-linear-to-bl from-[#a855f7] via-[#6366f1] to-transparent opacity-80"></div>
+      </div>
 
-      <div className="max-w-[1600] mx-auto relative z-10">
+      <div className="max-w-[1600px] mx-auto relative z-10">
         {/* Top Module */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
           {/* Image */}
