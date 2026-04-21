@@ -5,3 +5,4 @@ export { EndToEnd } from './components/EndToEnd';
 export { Services } from './components/Services';
 export { Team } from './components/Team';
 export { Conversion } from './components/Conversion';
+export { Portfolio } from './components/Portfolio';

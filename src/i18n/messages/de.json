@@ -45,6 +45,42 @@
     "headingB": "nexsof.tech",
     "subheadingB": "Individuelle Softwareentwicklung",
     "descriptionB": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie."
+  },
+  "feature": {
+    "title": "Lorem Ipsum",
+    "subtitle": "Lorem Ipsum Lorem Ipsum",
+    "description": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt.",
+    "item1": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt.",
+    "item2": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt.",
+    "item3": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt."
+  },
+  "technologies": {
+    "title": "TECHNOLOGIEN",
+    "subtitle": "Hinter Ihrem Projekt"
+  },
+  "portfolio": {
+    "title": "Ein Portfolio unserer Projekte",
+    "description": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt, als ein unbekannter Drucker eine Galeere vom Typ nahm und sie zusammenmischte, um ein Typenexemplar anzubieten.",
+    "ctaAll": "Alle Projekte sehen",
+    "ctaReadMore": "Weiterlesen",
+    "items": [
+      {
+        "title": "Lorem Ipsum",
+        "description": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt."
+      },
+      {
+        "title": "Lorem Ipsum",
+        "description": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt."
+      },
+      {
+        "title": "Lorem Ipsum",
+        "description": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt."
+      },
+      {
+        "title": "Lorem Ipsum",
+        "description": "Lorem Ipsum ist ein einfacher Blindtext der Druck- und Satzindustrie. Lorem Ipsum hat den Industriestandard seit den 1500er Jahren festgelegt."
+      }
+    ]
   }
 }
 
