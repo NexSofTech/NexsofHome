@@ -11,7 +11,7 @@ export function Conversion() {
   ];
 
   return (
-    <section className="bg-white py-24 px-6 relative w-full overflow-visible flex justify-center m-0">
+    <section className="bg-white py-24 px-6 relative w-full overflow-hidden flex justify-center m-0">
       {/* Container */}
       <div className="max-w-[1600px] w-full relative">
         

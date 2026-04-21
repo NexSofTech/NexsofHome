@@ -2,129 +2,72 @@ import { useTranslations } from "next-intl";
 
 function StarIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="text-[#a855f7]">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z" />
     </svg>
   );
 }
 
-const TEAM_FEATURES = [
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-];
-
-const GALLERY = [
-  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=400&q=80",
-];
+const COMMON_TEXT = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.";
 
 export function Team() {
   const t = useTranslations("team");
 
   return (
-    <section className="bg-[#f8f9fe] py-20 px-6" id="about">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-white py-24 px-6 relative" id="about">
+      <div className="max-w-[1280px] mx-auto">
         
-        {/* ── Top part ─── */}
+        {/* Header */}
         <div className="mb-14">
-          <div className="flex flex-col md:flex-row gap-6 justify-between items-end mb-10">
-            <h2
-              className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight flex-1 max-w-2xl"
-              style={{ fontFamily: "Outfit, sans-serif" }}
-            >
-              Lorem Ipsum is simply <span className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">dummy text of the printing</span>
-            </h2>
-            <p className="text-gray-500 text-[0.95rem] leading-relaxed max-w-sm md:text-right">
-              {t("descriptionA")}
-            </p>
-          </div>
+          <h2
+            className="text-[2.5rem] md:text-[3.25rem] font-bold bg-gradient-to-r from-[#d919a4] via-[#7526f2] to-[#1a6bf0] bg-clip-text text-transparent mb-4 leading-[1.1] w-fit"
+            style={{ fontFamily: "Outfit, sans-serif" }}
+          >
+            Lorem Ipsum is simply dummy text of the printing
+          </h2>
+          <p className="text-[#3f3f46] font-semibold text-[1.05rem] leading-[1.65] max-w-[850px]">
+            {COMMON_TEXT}
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch border-b pb-14 border-gray-200">
-            {/* Arched Photo */}
-            <div className="h-full">
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8 border-t-0">
+          
+          {/* Left Panel - Image Card */}
+          <div className="relative rounded-[2.1rem] p-[5px] bg-gradient-to-br from-[#d919a4] via-[#201540] to-[#042e6f] min-h-[500px]">
+            <div className="relative w-full h-full rounded-[1.85rem] overflow-hidden flex flex-col justify-end bg-black">
+              {/* Image */}
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
-                alt="nexsof.tech team"
-                className="w-full h-full min-h-[300px] object-cover rounded-tl-[6rem] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl shadow-lg"
+                alt="Team feature"
+                className="absolute inset-0 w-full h-full object-cover opacity-80"
               />
+              {/* Gradient Overlay for text readability */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/90 to-transparent h-[70%]" />
+              
+              {/* Text Content */}
+              <div className="relative z-10 px-8 pb-10">
+                <p className="text-white text-[1.05rem] leading-[1.6] font-medium">
+                  {COMMON_TEXT}
+                </p>
+              </div>
             </div>
+          </div>
 
-            {/* Dark Feature cards */}
-            <div className="flex flex-col gap-5 justify-center">
-              {[t("featureA1"), t("featureA2")].map((text, i) => (
-                <div key={i} className="bg-[#1a1b1f] rounded-[1.5rem] p-8 flex gap-5 items-start shadow-xl">
-                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <StarIcon />
-                  </div>
-                  <p className="text-white/80 text-[0.95rem] leading-relaxed">{text}</p>
+          {/* Right Panel - 2x2 Feature Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="bg-[#b3b3b3] rounded-[1.8rem] px-8 py-10 flex flex-col items-start border border-[#b3b3b3]">
+                {/* Icon Container */}
+                <div className="w-[52px] h-[52px] rounded-2xl bg-gradient-to-br from-[#df59f2] to-[#3f5cf0] flex items-center justify-center mb-6">
+                  <StarIcon />
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* ── Middle separator line ─── */}
-        <div className="w-full relative py-6">
-          <div className="w-full h-[2px] bg-gradient-to-r from-brand-pink via-brand-purple to-indigo-500 opacity-60 rounded-full" />
-        </div>
-
-        {/* ── Bottom part ─── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-10">
-          
-          {/* Left Text */}
-          <div>
-            <h3
-              className="text-3xl font-extrabold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2 leading-tight"
-              style={{ fontFamily: "Outfit, sans-serif" }}
-            >
-              Lorem Ipsum
-            </h3>
-            <h2
-              className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight"
-              style={{ fontFamily: "Outfit, sans-serif" }}
-            >
-              Lorem Ipsum Lorem Ipsum
-            </h2>
-            <p className="text-gray-500 text-[0.95rem] leading-relaxed mb-8">
-              {t("descriptionB")}
-            </p>
-
-            <ul className="flex flex-col gap-6">
-              {TEAM_FEATURES.map((f, i) => (
-                <li key={i} className="flex gap-4 items-center">
-                  <div className="w-10 h-10 rounded-full bg-[#1a1b1f] flex items-center justify-center shrink-0">
-                    <StarIcon />
-                  </div>
-                  <p className="text-gray-600 text-[0.9rem] leading-relaxed font-medium">{f}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Right Image Grid (7 images) */}
-          <div className="grid grid-cols-3 gap-3 h-[450px]">
-            {/* Column 1 */}
-            <div className="flex flex-col gap-3 h-full">
-              <img src={GALLERY[0]} className="w-full h-1/2 object-cover rounded-xl" alt="" />
-              <img src={GALLERY[1]} className="w-full h-1/2 object-cover rounded-xl" alt="" />
-            </div>
-            {/* Column 2 */}
-            <div className="flex flex-col gap-3 h-full">
-              <img src={GALLERY[2]} className="w-full h-1/3 object-cover rounded-xl" alt="" />
-              <img src={GALLERY[3]} className="w-full h-2/3 object-cover rounded-xl" alt="" />
-            </div>
-            {/* Column 3 */}
-            <div className="flex flex-col gap-3 h-full">
-              <img src={GALLERY[4]} className="w-full h-[40%] object-cover rounded-xl" alt="" />
-              <img src={GALLERY[5]} className="w-full h-[30%] object-cover rounded-xl" alt="" />
-              <img src={GALLERY[6]} className="w-full h-[30%] object-cover rounded-xl" alt="" />
-            </div>
+                {/* Text */}
+                <p className="text-white text-[0.95rem] leading-[1.65] font-medium">
+                  {COMMON_TEXT}
+                </p>
+              </div>
+            ))}
           </div>
 
         </div>

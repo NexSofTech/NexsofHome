@@ -1,25 +1,28 @@
+"use client";
+
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const NUMBERED_ITEMS = [
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    title: "Lorem Ipsum Lorem Ipsum",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    title: "Lorem Ipsum Lorem Ipsum",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    title: "Lorem Ipsum Lorem Ipsum",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    title: "Lorem Ipsum Lorem Ipsum",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    title: "Lorem Ipsum Lorem Ipsum",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
 ];
 
@@ -27,52 +30,60 @@ export function Services() {
   const t = useTranslations("services");
 
   return (
-    <section className="bg-white py-20 px-6 relative overflow-hidden" id="industries">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-          {/* Left: title */}
-          <div className="md:col-span-5">
+    <section className="bg-white py-24 px-6 relative" id="industries">
+      <div className="max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start relative">
+          {/* Left: title (Sticky) */}
+          <div className="md:col-span-4 relative md:sticky md:top-8 h-fit mb-12 md:mb-0">
             <h2
-              className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6"
+              className="text-[3.25rem] font-bold text-[#202029] leading-[1.1] mb-6 tracking-tight"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Lorem Ipsum{" "}
-              <span className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
-                Services
-              </span>
+              Lorem Ipsum
+              <br />
+              Services
             </h2>
-            <p className="text-gray-500 text-[0.9rem] leading-relaxed max-w-sm">{t("description")}</p>
+            <p className="text-[#4b5563] text-[0.95rem] leading-[1.7] max-w-[320px]">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book, a galley of type and scrambled it to make.
+            </p>
           </div>
 
           {/* Right: numbered list */}
-          <div className="md:col-span-7 flex flex-col">
+          <div className="md:col-span-8 flex flex-col pt-4 md:pt-0">
             {NUMBERED_ITEMS.map((item, i) => (
-              <div key={i} className="flex flex-col">
-                <div className="flex gap-6 py-6">
+              <motion.div
+                key={i}
+                className="flex flex-col"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <div className="flex gap-8 py-10">
                   <span
-                    className="text-[2.5rem] font-extrabold bg-gradient-to-br from-brand-pink via-brand-purple to-indigo-500 bg-clip-text text-transparent leading-none shrink-0 w-16 pt-1 tabular-nums"
+                    className="text-5xl font-bold text-[#202029] leading-none shrink-0 w-16 tabular-nums"
                     style={{ fontFamily: "Outfit, sans-serif" }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <div>
-                    <h3 className="font-bold text-gray-900 text-[1.1rem] mb-2">{item.title}</h3>
-                    <p className="text-gray-500 text-[0.875rem] leading-relaxed">{item.desc}</p>
+                  <div className="flex-1 mt-1">
+                    <h3 className="font-bold text-[#202029] text-[1.25rem] mb-3">{item.title}</h3>
+                    <p className="text-[#52525b] text-[0.9rem] leading-[1.8] pr-4">{item.desc}</p>
                   </div>
                 </div>
                 {i < NUMBERED_ITEMS.length - 1 && (
-                  <div className="w-full h-[1px] bg-gradient-to-r from-brand-pink via-brand-purple to-transparent opacity-30" />
+                  <div className="w-full h-[1px] bg-gradient-to-r from-pink-400 via-purple-400 to-blue-500 opacity-60" />
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Bottom CTA banner */}
-        <div className="mt-20 bg-[#12001e] relative overflow-hidden rounded-[2rem] px-10 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-2xl">
+        <div className="mt-32 bg-[#12001e] relative overflow-hidden rounded-[2rem] px-10 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-2xl">
           {/* Subtle background glow inside banner */}
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-purple/30 rounded-full blur-[60px]" />
-          
+
           <div className="flex-1 relative z-10 w-full max-w-2xl">
             <h3
               className="text-2xl md:text-3xl font-extrabold text-white mb-4 leading-snug"
