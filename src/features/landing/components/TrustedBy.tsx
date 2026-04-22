@@ -25,8 +25,7 @@ export function TrustedBy() {
           {[...BRANDS, ...BRANDS].map((brand, i) => (
             <span
               key={i}
-              className="text-[0.95rem] font-semibold text-white/25 hover:text-white/55 tracking-wide cursor-default transition-colors"
-              style={{ fontFamily: "Outfit, sans-serif" }}
+              className="text-[0.95rem] font-semibold text-white/25 hover:text-white/55 tracking-wide cursor-default transition-colors font-display"
             >
               {brand}
             </span>

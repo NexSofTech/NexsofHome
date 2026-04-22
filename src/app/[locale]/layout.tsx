@@ -1,12 +1,35 @@
+// app/[locale]/layout.tsx
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
+import { Inter, Outfit } from "next/font/google";
 import "../globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export const metadata = {
+  title: "nexsof.tech – Custom Software Development Company",
+  description:
+    "nexsof.tech builds next-gen AI-powered apps and websites for 25,000+ businesses worldwide.",
+  appleWebApp: {
+    title: "Nexsof.Tech",
+  },
+};
 
 export default async function LocaleLayout({
   children,
@@ -25,26 +48,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>nexsof.tech – Custom Software Development Company</title>
-        <meta
-          name="description"
-          content="nexsof.tech builds next-gen AI-powered apps and websites for 25,000+ businesses worldwide."
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
+      <body className={`${inter.variable} ${outfit.variable} font-sans`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

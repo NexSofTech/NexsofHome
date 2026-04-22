@@ -45,8 +45,7 @@ export function FeatureSection() {
             className="space-y-6"
           >
             <h2
-              className="text-[2.5rem] md:text-[3.25rem] font-bold text-[#18181b] leading-[1.1]"
-              style={{ fontFamily: "Outfit, sans-serif" }}
+              className="text-[2.5rem] md:text-[3.25rem] font-bold text-[#18181b] leading-[1.1] font-display"
             >
               {t("title")}
             </h2>

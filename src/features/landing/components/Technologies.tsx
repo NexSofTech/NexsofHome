@@ -24,13 +24,13 @@ export function Technologies() {
           <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] items-center">
             {/* LEFT TEXT */}
             <div>
-              <h2 className="text-[3rem] font-bold leading-[1.1] bg-linear-to-r from-[#d919a4] via-[#7b5cff] to-[#1a6bf0] bg-clip-text text-transparent mb-4">
+              <h2 className="text-[3rem] font-bold leading-[1.1] bg-linear-to-r from-[#d919a4] via-[#7b5cff] to-[#1a6bf0] bg-clip-text text-transparent mb-4 font-display">
                 {t("title")}
               </h2>
 
               <div className="w-full h-[4px] bg-linear-to-r from-[#d919a4] via-[#7b5cff] to-transparent mb-2 -ml-16" />
 
-              <p className="text-white/90 text-[2.6rem] font-semibold">
+              <p className="text-white/90 text-[2.6rem] font-semibold font-display">
                 {t("subtitle")}
               </p>
             </div>

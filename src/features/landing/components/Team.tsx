@@ -20,8 +20,7 @@ export function Team() {
         {/* Header */}
         <div className="mb-14">
           <h2
-            className="text-[2.5rem] md:text-[3.25rem] font-bold bg-gradient-to-r from-[#d919a4] via-[#7526f2] to-[#1a6bf0] bg-clip-text text-transparent mb-4 leading-[1.1] w-fit"
-            style={{ fontFamily: "Outfit, sans-serif" }}
+            className="text-[2.5rem] md:text-[3.25rem] font-bold bg-gradient-to-r from-[#d919a4] via-[#7526f2] to-[#1a6bf0] bg-clip-text text-transparent mb-4 leading-[1.1] w-fit font-display"
           >
             Lorem Ipsum is simply dummy text of the printing
           </h2>

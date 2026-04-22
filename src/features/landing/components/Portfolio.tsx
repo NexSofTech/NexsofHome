@@ -39,7 +39,7 @@ export function Portfolio() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl lg:text-5xl font-bold text-white leading-tight"
+                className="text-4xl lg:text-5xl font-bold text-white leading-tight font-display"
               >
                 {t("title")}
               </motion.h2>
@@ -114,7 +114,7 @@ export function Portfolio() {
                     <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-b from-black/5 to-transparent pointer-events-none" />
                     
                     <div className="w-full pt-2">
-                      <h3 className="text-[22px] font-bold text-[#18181b] mb-3">{t(`items.${index}.title`)}</h3>
+                      <h3 className="text-[22px] font-bold text-[#18181b] mb-3 font-display">{t(`items.${index}.title`)}</h3>
                       <p className="text-[#52525b] text-[14px] leading-[1.6] line-clamp-4">
                         {t(`items.${index}.description`)}
                       </p>

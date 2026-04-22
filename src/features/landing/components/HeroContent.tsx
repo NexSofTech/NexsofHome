@@ -64,8 +64,7 @@ export function HeroContent() {
             {/* Left: text */}
             <div className="flex flex-col gap-5">
               <h1
-                className="text-3xl md:text-[2.2rem] font-extrabold leading-[1.3] tracking-tight text-white"
-                style={{ fontFamily: "Outfit, sans-serif" }}
+                className="text-3xl md:text-[2.2rem] font-extrabold leading-[1.3] tracking-tight text-white font-display"
               >
                 {t("title")}{" "}
                 <span className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">

@@ -37,8 +37,7 @@ export function EndToEnd() {
             </div>
             
             <h2 
-              className="text-4xl md:text-[3rem] font-bold text-gray-900 leading-[1.1] mb-6"
-              style={{ fontFamily: "Outfit, sans-serif" }}
+              className="text-4xl md:text-[3rem] font-bold text-gray-900 leading-[1.1] mb-6 font-display"
             >
               Next-Gen Apps & Websites &<br/>Applications
             </h2>
@@ -72,7 +71,7 @@ export function EndToEnd() {
                   <circle cx="18" cy="6" r="1.5" fill="#111"/>
                 </svg>
               </div>
-              <h3 className="font-extrabold text-gray-900 text-[1.2rem] mb-3">{service.title}</h3>
+              <h3 className="font-extrabold text-gray-900 text-[1.2rem] mb-3 font-display">{service.title}</h3>
               <p className="text-gray-600 text-[0.85rem] leading-[1.7] opacity-90">{service.desc}</p>
             </div>
           ))}

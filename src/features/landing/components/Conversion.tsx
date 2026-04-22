@@ -46,8 +46,7 @@ export function Conversion() {
           {/* Left Content */}
           <div className="flex-1 text-white lg:pr-12 relative z-10 w-full">
             <h2 
-              className="text-4xl md:text-[2.75rem] font-bold mb-4 leading-tight text-white tracking-tight"
-              style={{ fontFamily: "Outfit, sans-serif" }}
+              className="text-4xl md:text-[2.75rem] font-bold mb-4 leading-tight text-white tracking-tight font-display"
             >
               Next-Gen Apps & Websites, AI-Powered
             </h2>

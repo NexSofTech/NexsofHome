@@ -36,8 +36,7 @@ export function Services() {
           {/* Left: title (Sticky) */}
           <div className="md:col-span-4 relative md:sticky md:top-8 h-fit mb-12 md:mb-0">
             <h2
-              className="text-[3.25rem] font-bold text-[#202029] leading-[1.1] mb-6 tracking-tight"
-              style={{ fontFamily: "Outfit, sans-serif" }}
+              className="text-[3.25rem] font-bold text-[#202029] leading-[1.1] mb-6 tracking-tight font-display"
             >
               Lorem Ipsum
               <br />
@@ -61,13 +60,12 @@ export function Services() {
               >
                 <div className="flex gap-8 py-10">
                   <span
-                    className="text-5xl font-bold text-[#202029] leading-none shrink-0 w-16 tabular-nums"
-                    style={{ fontFamily: "Outfit, sans-serif" }}
+                    className="text-5xl font-bold text-[#202029] leading-none shrink-0 w-16 tabular-nums font-display"
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="flex-1 mt-1">
-                    <h3 className="font-bold text-[#202029] text-[1.25rem] mb-3">{item.title}</h3>
+                    <h3 className="font-bold text-[#202029] text-[1.25rem] mb-3 font-display">{item.title}</h3>
                     <p className="text-[#52525b] text-[0.9rem] leading-[1.8] pr-4">{item.desc}</p>
                   </div>
                 </div>
@@ -86,8 +84,7 @@ export function Services() {
 
           <div className="flex-1 relative z-10 w-full max-w-2xl">
             <h3
-              className="text-2xl md:text-3xl font-extrabold text-white mb-4 leading-snug"
-              style={{ fontFamily: "Outfit, sans-serif" }}
+              className="text-2xl md:text-3xl font-extrabold text-white mb-4 leading-snug font-display"
             >
               {t("bannerTitle")}
             </h3>

@@ -10,8 +10,8 @@
   --color-dark-card:     #120018;
   --color-section-light: #f8f7ff;
 
-  --font-sans:    "Raleway", system-ui, -apple-system, sans-serif;
-  --font-display: "Raleway", system-ui, sans-serif;
+  --font-sans:    var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
 }
 
 /* ── Base ─────────────────────────────────────────────── */
