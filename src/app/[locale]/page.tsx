@@ -28,7 +28,7 @@ export default function HomePage() {
       <Team />
       <FeatureSection />
       <Technologies />
-      <Portfolio />
+      {/* <Portfolio /> */}
       {/* Placeholder sections for navigation testing */}
       <section id="service" className="min-h-[50vh] flex items-center justify-center bg-gray-50 border-t">
         <h2 className="text-2xl text-gray-400 font-bold uppercase tracking-widest">Our Services Section</h2>
