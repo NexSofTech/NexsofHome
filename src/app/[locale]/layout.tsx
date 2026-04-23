@@ -43,7 +43,7 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-
+//testing
   const messages = await getMessages();
 
   return (
