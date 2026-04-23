@@ -1,4 +1,7 @@
+"use client";
+
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 function CheckIcon() {
   return (
@@ -62,7 +65,13 @@ export function HeroContent() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
-            <div className="flex flex-col gap-5">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col gap-5"
+            >
               <h1
                 className="text-3xl md:text-[2.2rem] font-extrabold leading-[1.3] tracking-tight text-white font-display"
               >
@@ -107,12 +116,18 @@ export function HeroContent() {
                   {t("ctaPhone")}
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Right: device mockup */}
-            <div className="flex items-center justify-center w-full">
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex items-center justify-center w-full"
+            >
               <DeviceMockup />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,4 +1,7 @@
+"use client";
+
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 function StarIcon() {
   return (
@@ -18,7 +21,13 @@ export function Team() {
       <div className="max-w-[1600px] mx-auto">
         
         {/* Header */}
-        <div className="mb-14">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-14"
+        >
           <h2
             className="text-[2.5rem] md:text-[3.25rem] font-bold bg-gradient-to-r from-[#d919a4] via-[#7526f2] to-[#1a6bf0] bg-clip-text text-transparent mb-4 leading-[1.1] w-fit font-display"
           >
@@ -27,13 +36,19 @@ export function Team() {
           <p className="text-[#3f3f46] font-semibold text-[1.05rem] leading-[1.65] max-w-[850px]">
             {COMMON_TEXT}
           </p>
-        </div>
+        </motion.div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8 border-t-0">
           
           {/* Left Panel - Image Card */}
-          <div className="relative rounded-[2.1rem] p-[5px] bg-gradient-to-br from-[#d919a4] via-[#201540] to-[#042e6f] min-h-[500px]">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-[2.1rem] p-[5px] bg-gradient-to-br from-[#d919a4] via-[#201540] to-[#042e6f] min-h-[500px]"
+          >
             <div className="relative w-full h-full rounded-[1.85rem] overflow-hidden flex flex-col justify-end bg-black">
               {/* Image */}
               <img
@@ -51,12 +66,19 @@ export function Team() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Panel - 2x2 Feature Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="bg-[#b3b3b3] rounded-[1.8rem] px-8 py-10 flex flex-col items-start border border-[#b3b3b3]">
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="bg-[#b3b3b3] rounded-[1.8rem] px-8 py-10 flex flex-col items-start border border-[#b3b3b3]"
+              >
                 {/* Icon Container */}
                 <div className="w-[52px] h-[52px] rounded-2xl bg-gradient-to-br from-[#df59f2] to-[#3f5cf0] flex items-center justify-center mb-6">
                   <StarIcon />
@@ -65,7 +87,7 @@ export function Team() {
                 <p className="text-white text-[0.95rem] leading-[1.65] font-medium">
                   {COMMON_TEXT}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
 

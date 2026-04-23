@@ -1,4 +1,7 @@
+"use client";
+
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 export function Conversion() {
   const t = useTranslations("conversion"); // We can use translations if needed later
@@ -36,7 +39,13 @@ export function Conversion() {
         />
 
         {/* Main Card */}
-        <div className="bg-[#18181b] rounded-[2.5rem] w-full p-6 md:p-10 relative z-10 flex flex-col lg:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="bg-[#18181b] rounded-[2.5rem] w-full p-6 md:p-10 relative z-10 flex flex-col lg:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden"
+        >
           
           {/* Subtle Background Orbs inside the dark card (top center-ish) */}
           <div className="absolute top-10 left-[60%] w-8 h-8 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] blur-[2px] opacity-80 pointer-events-none"></div>
@@ -59,14 +68,21 @@ export function Conversion() {
 
             <ul className="flex flex-col gap-6 text-[1.05rem] text-white/80 mb-14">
               {checkItems.map((text, i) => (
-                <li key={i} className="flex items-center gap-4">
+                <motion.li 
+                  key={i} 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 + (i * 0.1) }}
+                  className="flex items-center gap-4"
+                >
                   {/* Check icon */}
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="shrink-0">
                     <circle cx="12" cy="12" r="11" fill="transparent" stroke="white" strokeWidth="2" />
                     <path d="M7.5 12L10.5 15L16.5 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span className="leading-snug">{text}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
 
@@ -117,7 +133,7 @@ export function Conversion() {
 
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
