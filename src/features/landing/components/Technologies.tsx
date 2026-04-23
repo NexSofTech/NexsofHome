@@ -14,9 +14,9 @@ export function Technologies() {
   );
 
   return (
-    <section className="px-6 py-20 bg-[#f5f5f5]">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="relative rounded-[28px] bg-[#0b0b0f] overflow-hidden px-10 py-24 lg:px-16 lg:py-32">
+    <section className="px-4 py-20 bg-[#f5f5f5]">
+      <div className="max-w-[1600px] mx-auto">
+        <div className="relative rounded-[28px] bg-[#0b0b0f] overflow-hidden px-6 py-24 lg:px-10 lg:py-32">
           {/* Solid Spheres */}
           <div className="absolute -top-24 left-[22%] w-[200px] h-[200px] bg-linear-to-b from-[#ff4ecd] to-[#7b5cff] rounded-full opacity-90 text-white" />
           <div className="absolute -bottom-32 -left-16 w-[300px] h-[300px] bg-linear-to-tr from-[#3b82f6] to-[#7c3aed] rounded-full opacity-80" />

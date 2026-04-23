@@ -30,8 +30,8 @@ export function Services() {
   const t = useTranslations("services");
 
   return (
-    <section className="bg-white py-24 px-6 relative" id="industries">
-      <div className="max-w-[1100px] mx-auto">
+    <section className="bg-white py-24 px-4 relative" id="industries">
+      <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start relative">
           {/* Left: title (Sticky) */}
           <div className="md:col-span-4 relative md:sticky md:top-8 h-fit mb-12 md:mb-0">
@@ -78,7 +78,7 @@ export function Services() {
         </div>
 
         {/* Bottom CTA banner */}
-        <div className="mt-32 bg-[#12001e] relative overflow-hidden rounded-[2rem] px-10 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-2xl">
+        <div className="mt-32 bg-[#12001e] relative overflow-hidden rounded-[2rem] px-6 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-2xl">
           {/* Subtle background glow inside banner */}
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-purple/30 rounded-full blur-[60px]" />
 

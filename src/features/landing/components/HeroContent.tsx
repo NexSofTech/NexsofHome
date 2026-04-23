@@ -50,9 +50,9 @@ export function HeroContent() {
   const features = [t("feature1"), t("feature2"), t("feature3"), t("feature4")];
 
   return (
-    <section className="bg-[#f8f9fe] py-20 px-6 relative overflow-hidden" id="service">
+    <section className="bg-[#f8f9fe] py-20 px-4 relative overflow-hidden" id="service">
       {/* Container for the dark card */}
-      <div className="max-w-[1200px] mx-auto relative">
+      <div className="max-w-[1600px] mx-auto relative">
         
         {/* Subtle purple glow behind the card top-left */}
         <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-brand-purple/40 blur-[40px] z-0" />

@@ -11,7 +11,7 @@ export function Conversion() {
   ];
 
   return (
-    <section className="bg-white py-24 px-6 relative w-full overflow-hidden flex justify-center m-0">
+    <section className="bg-white py-24 px-4 relative w-full overflow-hidden flex justify-center m-0">
       {/* Container */}
       <div className="max-w-[1600px] w-full relative">
         
@@ -36,7 +36,7 @@ export function Conversion() {
         />
 
         {/* Main Card */}
-        <div className="bg-[#18181b] rounded-[2.5rem] w-full p-10 md:p-14 relative z-10 flex flex-col lg:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden">
+        <div className="bg-[#18181b] rounded-[2.5rem] w-full p-6 md:p-10 relative z-10 flex flex-col lg:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden">
           
           {/* Subtle Background Orbs inside the dark card (top center-ish) */}
           <div className="absolute top-10 left-[60%] w-8 h-8 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] blur-[2px] opacity-80 pointer-events-none"></div>

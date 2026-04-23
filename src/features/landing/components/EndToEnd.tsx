@@ -9,7 +9,7 @@ export function EndToEnd() {
   const t = useTranslations("endToEnd");
 
   return (
-    <section className="bg-white py-24 px-6 relative overflow-hidden" id="expertise">
+    <section className="bg-white py-24 px-4 relative overflow-hidden" id="expertise">
       {/* Background Orbs pinned to max-width container */}
       <div className="absolute inset-0 mx-auto max-w-[1600px] pointer-events-none z-0">
         <div className="absolute top-[60px] -left-[35px] w-16 h-16 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] opacity-90"></div>

@@ -14,8 +14,8 @@ export function Team() {
   const t = useTranslations("team");
 
   return (
-    <section className="bg-white py-24 px-6 relative" id="about">
-      <div className="max-w-[1280px] mx-auto">
+    <section className="bg-white py-24 px-4 relative" id="about">
+      <div className="max-w-[1600px] mx-auto">
         
         {/* Header */}
         <div className="mb-14">
