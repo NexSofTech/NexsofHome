@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 
 const NUMBERED_ITEMS = [
   {
-    title: "Lorem Ipsum Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    title: "Web & Mobile App Development",
+    desc: "We build web and mobile applications that are fast, scalable, and genuinely pleasant to use. Whether it's a customer-facing product or an internal tool, we approach every project with the same attention to detail — clean architecture, thoughtful UX, and code that's built to last. React, Next.js, Flutter, or native — we use what fits best, not just what's trendy.",
   },
   {
-    title: "Lorem Ipsum Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    title: "ERP & CRM Software",
+    desc: "Generic ERP and CRM products almost never fit exactly how your business operates. We build both from scratch or customize existing platforms to map perfectly to your workflows. From managing purchase orders and employee records to tracking customer journeys and automating follow-ups — we've built these systems for manufacturers, retailers, hospitals, and service businesses across India.",
   },
   {
-    title: "Lorem Ipsum Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    title: "AI & Intelligent Automation",
+    desc: "We've moved well past chatbots. Our team integrates machine learning models, large language model-based assistants, computer vision, and intelligent document processing into production software. If a task in your business is repetitive and rule-based, it's a candidate for automation. We find those opportunities and build systems that eliminate them from your team's daily workload.",
   },
   {
-    title: "Lorem Ipsum Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    title: "Custom Software Solutions",
+    desc: "Sometimes what you need doesn't exist on the market. Maybe it's an industry-specific platform, a proprietary tool that gives you a competitive edge, or a legacy system that needs to be rebuilt the right way. We take complex, custom requirements seriously. We spend time understanding the problem before writing a single line of code, and we don't stop until the software actually solves it.",
   },
   {
-    title: "Lorem Ipsum Lorem Ipsum",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    title: "Cloud Infrastructure & DevOps",
+    desc: "A great product deserves reliable infrastructure. We handle cloud architecture on AWS, GCP, and Azure — including containerization, CI/CD pipelines, database management, monitoring, and auto-scaling. Your software should be online when it matters, fast when it's busy, and maintainable long after launch. We make sure of that.",
   },
 ];
 
@@ -38,12 +38,12 @@ export function Services() {
             <h2
               className="text-[3.25rem] font-bold text-[#202029] leading-[1.1] mb-6 tracking-tight font-display"
             >
-              Lorem Ipsum
+              What We
               <br />
-              Services
+              Build
             </h2>
             <p className="text-[#4b5563] text-[0.95rem] leading-[1.7] max-w-[320px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book, a galley of type and scrambled it to make.
+              From the first line of code to the final deployment, we handle every step. Our team in Lucknow has delivered software solutions across industries — and we treat every client&apos;s problem as our own.
             </p>
           </div>
 

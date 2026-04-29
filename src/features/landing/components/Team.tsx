@@ -11,7 +11,16 @@ function StarIcon() {
   );
 }
 
-const COMMON_TEXT = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.";
+const ABOUT_HEADING = "We're Not an Agency. We're Your Tech Team.";
+const ABOUT_SUMMARY = "Nexsof started in Lucknow with a belief that businesses across India deserve quality software — without the inflated price tags that come with big-city agencies. Today, we build everything from landing pages to full-scale ERP systems, and we're proud of every product we've shipped.";
+const ABOUT_LEFT_CARD = "Our team is a mix of engineers, designers, and product thinkers who've worked on real products used by real people. We don't just ship features — we think about outcomes. We care about whether what we built actually helped your business grow, not just whether we met a deadline. That mindset is what keeps clients coming back."
+
+const FEATURE_CARDS = [
+  "Based in Lucknow, we serve clients across India and internationally. Remote-first by nature, but always reachable. You get a dedicated point of contact, not a ticket queue.",
+  "We've built websites, mobile apps, ERPs, CRMs, and AI tools across industries — from healthcare and education to logistics, retail, and manufacturing.",
+  "No offshore outsourcing or handoff chains. Your project is built by our in-house team — the same engineers who are on the kickoff call stay with you through launch and beyond.",
+  "We price fairly. Quality software shouldn't require a VC-funded budget. We work with startups, SMBs, and enterprises — and we scope projects honestly so there are no nasty surprises.",
+];
 
 export function Team() {
   const t = useTranslations("team");
@@ -31,10 +40,10 @@ export function Team() {
           <h2
             className="text-[2.5rem] md:text-[3.25rem] font-bold bg-gradient-to-r from-[#d919a4] via-[#7526f2] to-[#1a6bf0] bg-clip-text text-transparent mb-4 leading-[1.1] w-fit font-display"
           >
-            Lorem Ipsum is simply dummy text of the printing
+            {ABOUT_HEADING}
           </h2>
           <p className="text-[#3f3f46] font-semibold text-[1.05rem] leading-[1.65] max-w-[850px]">
-            {COMMON_TEXT}
+            {ABOUT_SUMMARY}
           </p>
         </motion.div>
 
@@ -62,7 +71,7 @@ export function Team() {
               {/* Text Content */}
               <div className="relative z-10 px-8 pb-10">
                 <p className="text-white text-[1.05rem] leading-[1.6] font-medium">
-                  {COMMON_TEXT}
+                  {ABOUT_LEFT_CARD}
                 </p>
               </div>
             </div>
@@ -85,7 +94,7 @@ export function Team() {
                 </div>
                 {/* Text */}
                 <p className="text-white text-[0.95rem] leading-[1.65] font-medium">
-                  {COMMON_TEXT}
+                  {FEATURE_CARDS[i - 1]}
                 </p>
               </motion.div>
             ))}

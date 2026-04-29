@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "service": "Service",
+    "service": "Services",
     "expertise": "Expertise",
     "industries": "Industries",
     "technologies": "Technologies",
@@ -10,49 +10,49 @@
     "cta": "Connect Now"
   },
   "hero": {
-    "badge": "Trusted by +25,000 Businesses",
-    "title": "Next-Gen Apps & Websites,",
-    "titleHighlight": "AI-Powered",
+    "badge": "Trusted by 25,000+ Businesses Across India",
+    "title": "Your Software Partner,",
+    "titleHighlight": "Built in Lucknow.",
     "subtitle": "nexsof.tech",
-    "subtitleSuffix": "– Custom Software Development Company",
-    "feature1": "End-to-end software development tailored to your vision.",
-    "feature2": "AI-driven solutions that scale with your business.",
-    "feature3": "Agile teams delivering on time, every time.",
-    "feature4": "From idea to launch — we've got you covered.",
-    "ctaPrimary": "Get Started",
+    "subtitleSuffix": "– One stop solution for all your software needs.",
+    "feature1": "Custom websites, mobile apps & enterprise software built for growth.",
+    "feature2": "AI-powered automation that saves time and cuts operational costs.",
+    "feature3": "ERP, CRM & business tools tailored to how your team actually works.",
+    "feature4": "From idea to launch — we handle strategy, design, and delivery.",
+    "ctaPrimary": "Start Your Project",
     "ctaPhone": "+91-8189010044"
   },
   "trusted": {
-    "label": "TRUSTED BY +25,000 BUSINESSES"
+    "label": "TRUSTED BY 25,000+ BUSINESSES ACROSS INDIA"
   },
   "endToEnd": {
-    "eyebrow": "End-to-End Solutions :",
-    "heading": "Custom Development and Digital Marketing",
-    "description": "We create custom software, websites, and apps that suit your business requirements, while smart digital marketing strategies help grow your online presence and deliver demonstrated results."
+    "eyebrow": "End-to-End Software Solutions · Lucknow, India",
+    "heading": "Everything Your Business Needs, Under One Roof",
+    "description": "Whether you're a startup looking for your first website or an enterprise needing a full-scale ERP — Nexsof has done it before. We bring the technical depth and real-world experience to make your project work, not just launch."
   },
   "services": {
-    "heading": "Our Core Services",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book, a galley of type and scrambled it to make.",
-    "bannerTitle": "Ready to Start Your Digital Transformation?",
-    "bannerDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown object, when an unknown printer took a galley.",
-    "bannerCta": "Visit Now"
+    "heading": "What We Build",
+    "description": "From the first line of code to the final deployment, we handle every step. Our team in Lucknow has delivered software solutions across industries — and we treat every client's problem as our own.",
+    "bannerTitle": "Ready to Build Something That Actually Works?",
+    "bannerDesc": "Most software projects fail not because the idea was bad, but because execution was. We've worked with 25,000+ businesses to make sure that doesn't happen. Let's talk about yours.",
+    "bannerCta": "Get in Touch"
   },
   "team": {
-    "headingA": "Lorem Ipsum is simply dummy text of the printing",
-    "descriptionA": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a specimen.",
-    "featureA1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.",
-    "featureA2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.",
+    "headingA": "We're Not an Agency. We're Your Tech Team.",
+    "descriptionA": "Nexsof started in Lucknow with a belief that businesses across India deserve quality software — without the inflated price tags that come with big-city agencies. Today, we build everything from landing pages to full-scale ERP systems, and we're proud of every product we've shipped.",
+    "featureA1": "A team of engineers, designers, and product thinkers who've worked on real products used by real people. We care about outcomes, not just deliverables.",
+    "featureA2": "Based in Lucknow, serving clients across India and beyond. Remote-first by nature, but always reachable when it actually matters.",
     "headingB": "nexsof.tech",
-    "subheadingB": "Custom Software Development",
-    "descriptionB": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
+    "subheadingB": "Custom Software, Real Results.",
+    "descriptionB": "We started as a small team with a big obsession for building things that work. Today, Nexsof is a full-service software company — handling everything from concept to coding to cloud deployment. We don't just build software; we build partnerships."
   },
   "feature": {
-    "title": "Lorem Ipsum",
-    "subtitle": "Lorem Ipsum Lorem Ipsum",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen.",
-    "item1": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    "item2": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    "item3": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    "title": "Why Businesses Choose Nexsof",
+    "subtitle": "Software built for the real world, not just the pitch deck.",
+    "description": "We've been in the trenches with startups, SMBs, and enterprises — and we've learned what separates software that drives growth from software that sits unused. Here's what makes working with Nexsof different.",
+    "item1": "Every project starts with a deep-dive into your business — not a template. We design workflows, interfaces, and systems that reflect how your team actually operates.",
+    "item2": "We don't disappear after launch. Bug reports, feature requests, performance tuning — we're available for ongoing support because software is never truly finished.",
+    "item3": "Our pricing is transparent from day one. No surprise invoices, no scope creep without sign-off. You always know what you're paying for and why."
   },
   "technologies": {
     "title": "TECHNOLOGIES",
@@ -60,27 +60,26 @@
   },
   "portfolio": {
     "title": "A Portfolio of Our Projects",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen. when an unknown printer took a galley of type and scrambled it to make a type specimen.",
+    "description": "Every project in our portfolio represents a real business problem we helped solve. We've built enterprise ERPs for manufacturers, booking platforms for service businesses, AI-powered tools for healthcare providers, and e-commerce systems for retailers. Here's a look at some of our recent work.",
     "ctaAll": "See All Projects",
     "ctaReadMore": "Read More",
     "items": [
       {
-        "title": "Lorem Ipsum",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
+        "title": "Enterprise ERP System",
+        "description": "A full-scale ERP platform built for a mid-sized manufacturer in UP — covering inventory, procurement, production, HR, and finance in a single unified system."
       },
       {
-        "title": "Lorem Ipsum",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
+        "title": "AI-Powered Analytics Dashboard",
+        "description": "A real-time business intelligence dashboard with ML-driven sales forecasting and anomaly detection, built for a logistics company managing 500+ daily shipments."
       },
       {
-        "title": "Lorem Ipsum",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
+        "title": "Custom CRM Platform",
+        "description": "A tailored CRM built from scratch for a B2B sales team — with lead scoring, automated follow-up workflows, and deep integration with WhatsApp Business API."
       },
       {
-        "title": "Lorem Ipsum",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen."
+        "title": "Healthcare Management App",
+        "description": "A cross-platform mobile app for a multi-clinic healthcare provider — handling appointments, prescriptions, patient records, and billing across 12 locations."
       }
     ]
   }
 }
-

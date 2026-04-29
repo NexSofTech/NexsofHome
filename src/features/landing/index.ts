@@ -6,3 +6,4 @@ export { Services } from './components/Services';
 export { Team } from './components/Team';
 export { Conversion } from './components/Conversion';
 export { Portfolio } from './components/Portfolio';
+export { Testimonials } from './components/Testimonials';
