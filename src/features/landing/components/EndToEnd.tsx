@@ -7,38 +7,47 @@ const SERVICES = [
   {
     title: "Website Development",
     desc: "Every business needs a home on the internet, and we make sure yours stands out. From slick marketing sites to complex portals, we build fast, beautiful, and conversion-focused websites that your customers will actually enjoy using.",
+    icon: "hgi-browser",
   },
   {
     title: "Mobile App Development",
     desc: "We build native and cross-platform mobile apps for Android and iOS that feel smooth, load fast, and solve real problems. Whether it's a consumer app or an internal tool for your team, we've shipped it before.",
+    icon: "hgi-smart-phone-01",
   },
   {
     title: "Custom Software Development",
     desc: "Off-the-shelf software rarely fits perfectly. We design and build custom applications from the ground up — tailored to your workflows, your team, and your customers. No unnecessary bloat, just what you actually need.",
+    icon: "hgi-code-01",
   },
   {
     title: "ERP Systems",
     desc: "Managing your operations on spreadsheets or disconnected tools? Our ERP solutions bring your inventory, HR, finance, and operations into one unified platform — giving you visibility and control over your entire business.",
+    icon: "hgi-database-01",
   },
   {
     title: "CRM Software",
     desc: "Your customer relationships deserve better than a cluttered inbox. Our CRM solutions help you track leads, manage follow-ups, and close deals faster — built specifically for how your sales and support teams operate.",
+    icon: "hgi-user-group-01",
   },
   {
     title: "AI-Powered Solutions",
     desc: "AI isn't just a buzzword for us — we've integrated machine learning, natural language processing, and intelligent automation into real products used by real businesses. Let's find where AI can genuinely make your operations smarter.",
+    icon: "hgi-ai-brain-01",
   },
   {
     title: "Business Automation",
     desc: "If your team is doing the same repetitive tasks every day, we can automate them. From invoice processing to report generation to customer notifications — we identify the bottlenecks and build systems that run on their own.",
+    icon: "hgi-settings-01",
   },
   {
     title: "Digital Marketing Tech",
     desc: "Great software should be discoverable. We build SEO-ready platforms, set up analytics pipelines, and integrate marketing tools that give you real data on what's working — and what isn't.",
+    icon: "hgi-target-01",
   },
   {
     title: "Cloud & DevOps",
     desc: "We deploy your software on modern cloud infrastructure with CI/CD pipelines, monitoring, and auto-scaling built in. Your product will stay online, stay fast, and be ready to grow without manual intervention.",
+    icon: "hgi-cloud-server",
   },
 ];
 
@@ -82,19 +91,19 @@ export function EndToEnd() {
             className="flex flex-col items-start lg:pr-8"
           >
             <div className="inline-block bg-linear-to-r from-[#e1b2e8] to-[#ffffff] px-4 py-2 rounded-md mb-6">
-              <span className="text-gray-900 font-extrabold text-[0.8rem] uppercase tracking-wide">End-to-End Software Solutions · Lucknow, India</span>
+              <span className="text-gray-900 font-extrabold text-[0.8rem] uppercase tracking-wide">Nexsof, Custom Software Development Company</span>
             </div>
             
             <h2 
               className="text-4xl md:text-[3rem] font-bold text-gray-900 leading-[1.1] mb-6 font-display"
             >
-              Everything Your Business<br/>Needs, Under One Roof
+              Next-Gen Apps and Websites,<br/>AI-Powered
             </h2>
 
             <div className="w-full h-[1px] bg-gray-300 mb-8"></div>
 
             <p className="text-gray-600 text-[0.95rem] leading-relaxed mb-10">
-              Whether you&apos;re a startup looking for your first website or an enterprise needing a full-scale ERP — Nexsof has done it before. We bring the technical depth and real-world experience to make your project work, not just launch.
+              We build scalable digital products for businesses of all sizes. Our integrated multi-division model delivers end-to-end solutions. We combine technology, media, and business strategy under one roof. Trusted by thousands of businesses across multiple industries.
             </p>
 
             <button className="bg-linear-to-r from-[#e879f9] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
@@ -115,17 +124,7 @@ export function EndToEnd() {
               className="flex flex-col p-8 rounded-3xl border border-transparent hover:border-[#f0c1f2] hover:bg-white/80 hover:shadow-[0_15px_40px_rgb(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer backdrop-blur-sm"
             >
               <div className="mb-6">
-                {/* SVG Icon resembling the code + gear from screenshot */}
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 17L4 7C4 5.89543 4.89543 5 6 5L17 5C18.1046 5 19 5.89543 19 7L19 17C19 18.1046 18.1046 19 17 19L6 19C4.89543 19 4 18.1046 4 17Z" stroke="#111" strokeWidth="1.5"/>
-                  <path d="M9 10L7 12L9 14" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M14 10L16 12L14 14" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M12.5 9L10.5 15" stroke="#111" strokeWidth="1.5" strokeLinecap="round"/>
-                  
-                  {/* Gear overlay */}
-                  <circle cx="18" cy="6" r="3.5" fill="white" stroke="#111" strokeWidth="1.5"/>
-                  <circle cx="18" cy="6" r="1.5" fill="#111"/>
-                </svg>
+                <i className={`hgi-stroke ${service.icon} text-4xl text-gray-900`} />
               </div>
               <h3 className="font-extrabold text-gray-900 text-[1.2rem] mb-3 font-display">{service.title}</h3>
               <p className="text-gray-600 text-[0.85rem] leading-[1.7] opacity-90">{service.desc}</p>

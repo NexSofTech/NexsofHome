@@ -11,15 +11,15 @@ function StarIcon() {
   );
 }
 
-const ABOUT_HEADING = "We're Not an Agency. We're Your Tech Team.";
-const ABOUT_SUMMARY = "Nexsof started in Lucknow with a belief that businesses across India deserve quality software — without the inflated price tags that come with big-city agencies. Today, we build everything from landing pages to full-scale ERP systems, and we're proud of every product we've shipped.";
-const ABOUT_LEFT_CARD = "Our team is a mix of engineers, designers, and product thinkers who've worked on real products used by real people. We don't just ship features — we think about outcomes. We care about whether what we built actually helped your business grow, not just whether we met a deadline. That mindset is what keeps clients coming back."
+const ABOUT_HEADING = "We are not an agency, we are your Tech Team.";
+const ABOUT_SUMMARY = "We are a diverse group of innovators, technical thinkers, and software problem-solvers united by a shared mission. Our goal is to deliver exceptional digital products, enterprise software solutions, and mobile applications that drive measurable business growth.";
+const ABOUT_LEFT_CARD = "Our software development specialists bring deep technical knowledge from top-tier companies and leading academic institutions. We are committed to ensuring every custom application, SaaS platform, and digital transformation project is handled with the highest standards of code quality, robust security, and professional excellence.";
 
 const FEATURE_CARDS = [
-  "Based in Lucknow, we serve clients across India and internationally. Remote-first by nature, but always reachable. You get a dedicated point of contact, not a ticket queue.",
-  "We've built websites, mobile apps, ERPs, CRMs, and AI tools across industries — from healthcare and education to logistics, retail, and manufacturing.",
-  "No offshore outsourcing or handoff chains. Your project is built by our in-house team — the same engineers who are on the kickoff call stay with you through launch and beyond.",
-  "We price fairly. Quality software shouldn't require a VC-funded budget. We work with startups, SMBs, and enterprises — and we scope projects honestly so there are no nasty surprises.",
+  "We believe the best technological innovations emerge from open dialogue and cross-functional teamwork. Our dedicated developers collaborate closely with clients to build scalable software solutions.",
+  "Every voice is valued throughout our agile software development lifecycle. Each unique perspective actively shapes our strategic path forward, ensuring we deliver intuitive user experiences and high-performance applications.",
+  "We consistently invest in our talented engineering team and our robust deployment processes. Our IT professionals are continuously learning and evolving with modern programming frameworks to build future-proof platforms.",
+  "We stay ahead of digital industry trends in a rapidly changing technology landscape. Our primary focus is to deliver lasting value, intelligent business automation, and comprehensive IT services to our global clients.",
 ];
 
 export function Team() {

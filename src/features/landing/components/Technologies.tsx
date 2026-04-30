@@ -3,15 +3,35 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
+const technologies = [
+  { name: "React", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+  { name: "Angular", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" },
+  { name: "Vue", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
+  { name: "HTML5", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png" },
+  { name: "CSS3", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/css/css.png" },
+  { name: "JavaScript", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png" },
+  { name: "Tailwind", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+  { name: "Node.js", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+  { name: "Claude", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg" },
+  { name: "Gemini", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlegemini.svg" },
+  { name: "OpenAI", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" },
+  { name: "Github", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+  { name: "VS Code", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
+  { name: "Typescript", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png" },
+  { name: "Python", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png" },
+  { name: "Docker", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+];
+
 export function Technologies() {
   const t = useTranslations("technologies");
 
   const columns = 4;
-  const rows = 6; // extra for smooth loop
-
-  const grid = Array.from({ length: columns }, (_, colIndex) =>
-    Array.from({ length: rows })
-  );
+  
+  // Distribute technologies into columns
+  const grid = Array.from({ length: columns }, (_, colIndex) => {
+    const start = colIndex * 4;
+    return technologies.slice(start, start + 4);
+  });
 
   return (
     <section className="px-4 py-20 bg-[#f5f5f5]">
@@ -48,17 +68,22 @@ export function Technologies() {
                       y: isReverse ? ["-50%", "0%"] : ["0%", "-50%"],
                     }}
                     transition={{
-                      duration: 50,
+                      duration: 30 + colIndex * 5,
                       repeat: Infinity,
                       ease: "linear",
                     }}
                   >
-                    {[...col, ...col].map((_, i) => (
+                    {[...col, ...col].map((tech, i) => (
                       <div
                         key={i}
-                        className="w-full aspect-square rounded-[16px] bg-[#6b6b6b]/60 relative overflow-hidden"
+                        className="w-full aspect-square rounded-[16px] bg-[#1c1c21] border border-white/5 relative overflow-hidden flex items-center justify-center group"
                       >
-                        <div className="absolute inset-0 bg-linear-to-b from-white/20 via-transparent to-transparent opacity-30" />
+                        <div className="absolute inset-0 bg-linear-to-b from-white/5 via-transparent to-transparent opacity-30" />
+                        <img 
+                          src={tech.logoUrl} 
+                          alt={tech.name} 
+                          className="w-20 h-20 object-contain transition-transform group-hover:scale-110 opacity-90 group-hover:opacity-100 duration-300" 
+                        />
                       </div>
                     ))}
                   </motion.div>
@@ -67,9 +92,11 @@ export function Technologies() {
             </div>
 
             {/* MARQUEE GRID (Mobile Horizontal) */}
-            <div className="lg:hidden flex flex-col gap-8 mt-8">
+            <div className="lg:hidden flex flex-col gap-8 mt-12">
               {[...Array(4)].map((_, rowIndex) => {
                 const isReverse = rowIndex % 2 !== 0;
+                const rowTechs = technologies.slice(rowIndex * 4, (rowIndex + 1) * 4);
+                
                 return (
                   <div key={rowIndex} className="w-full overflow-hidden">
                     <motion.div
@@ -78,18 +105,22 @@ export function Technologies() {
                         x: isReverse ? ["-50%", "0%"] : ["0%", "-50%"],
                       }}
                       transition={{
-                        duration: 35 + rowIndex * 5,  
+                        duration: 25 + rowIndex * 5,  
                         repeat: Infinity,
                         ease: "linear",
                       }}
                     >
-                      {/* 16 items (8 unique x 2) for seamless horizontal loop */}
-                      {[...Array(16)].map((_, i) => (
+                      {[...rowTechs, ...rowTechs].map((tech, i) => (
                         <div
                           key={i}
-                          className="w-[85px] h-[85px] rounded-[12px] bg-[#6b6b6b]/60 relative flex-shrink-0 overflow-hidden"
+                          className="w-[100px] h-[100px] rounded-[12px] bg-[#1c1c21] border border-white/5 relative flex-shrink-0 overflow-hidden flex items-center justify-center"
                         >
-                          <div className="absolute inset-0 bg-linear-to-b from-white/20 via-transparent to-transparent opacity-30" />
+                          <div className="absolute inset-0 bg-linear-to-b from-white/5 via-transparent to-transparent opacity-30" />
+                          <img 
+                            src={tech.logoUrl} 
+                            alt={tech.name} 
+                            className="w-14 h-14 object-contain opacity-100" 
+                          />
                         </div>
                       ))}
                     </motion.div>

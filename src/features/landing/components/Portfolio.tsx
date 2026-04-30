@@ -1,32 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Star, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
+    title: "Enterprise ERP System",
+    description: "A full-scale ERP platform built for a mid-sized manufacturer — covering inventory, procurement, production, HR, and finance in a single unified system.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     bgClass: "bg-linear-to-b from-[#ffc86b] to-[#ff9822]",
   },
   {
+    title: "AI-Powered Analytics Dashboard",
+    description: "A real-time business intelligence dashboard with ML-driven sales forecasting and anomaly detection, built for a logistics company managing 500+ daily shipments.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     bgClass: "bg-linear-to-b from-[#9bc5ff] to-[#609fff]",
   },
   {
+    title: "Custom CRM Platform",
+    description: "A tailored CRM built from scratch for a B2B sales team — with lead scoring, automated follow-up workflows, and deep integration with WhatsApp Business API.",
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
     bgClass: "bg-[#0f0728] shadow-[inset_0_0_40px_rgba(80,40,200,0.3)]",
   },
   {
+    title: "Healthcare Management App",
+    description: "A cross-platform mobile app for a multi-clinic healthcare provider — handling appointments, prescriptions, patient records, and billing across 12 locations.",
     image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80",
     bgClass: "bg-linear-to-br from-[#5338a0] via-[#944093] to-[#d67b55]",
   },
 ];
 
 export function Portfolio() {
-  const t = useTranslations("portfolio");
-
   return (
     <section className="px-4 py-20 bg-white">
       <div className="max-w-[1600px] mx-auto">
@@ -41,7 +46,7 @@ export function Portfolio() {
                 viewport={{ once: true }}
                 className="text-4xl lg:text-5xl font-bold text-white font-display"
               >
-                {t("title")}
+                Our Work & Mock Projects
               </motion.h2>
               
               <motion.button 
@@ -49,7 +54,7 @@ export function Portfolio() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-black px-8 py-4 rounded-[16px] font-bold text-2xl flex items-center gap-3 group transition-all shrink-0"
               >
-                {t("ctaAll")}
+                See All Projects
                 <ArrowUpRight className="text-[#3b82f6] w-7 h-7 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </div>
@@ -61,7 +66,7 @@ export function Portfolio() {
               transition={{ delay: 0.1 }}
               className="text-gray-300 text-[15px] lg:text-base leading-relaxed max-w-3xl"
             >
-              {t("description")}
+              Explore our recent work. From enterprise ERP systems and intelligent analytics dashboards to comprehensive healthcare apps, we build scalable digital solutions tailored to solve complex business challenges.
             </motion.p>
           </div>
 
@@ -77,7 +82,7 @@ export function Portfolio() {
             </svg>
             <div className="absolute top-1/2 left-10 right-10 h-[2px] bg-white/60 -translate-y-1/2 z-0" />
             <div className="flex justify-between relative z-10 w-full">
-              {[...Array(4)].map((_, i) => (
+              {[...Array(projects.length)].map((_, i) => (
                 <div key={i} className="relative group flex items-center justify-center">
                   <motion.div 
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -124,9 +129,9 @@ export function Portfolio() {
                       <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-b from-black/5 to-transparent pointer-events-none" />
                       
                       <div className="w-full pt-2">
-                        <h3 className="text-[22px] font-bold text-[#18181b] mb-3 font-display">{t(`items.${index}.title`)}</h3>
+                        <h3 className="text-[22px] font-bold text-[#18181b] mb-3 font-display">{project.title}</h3>
                         <p className="text-[#52525b] text-[16px] leading-[1.4] line-clamp-4">
-                          {t(`items.${index}.description`)}
+                          {project.description}
                         </p>
                       </div>
                       
@@ -135,7 +140,7 @@ export function Portfolio() {
                         whileTap={{ scale: 0.98 }}
                         className="w-[90%] py-3.5 mt-4 rounded-full bg-linear-to-r from-[#df59f2] to-[#3f5cf0] text-white font-bold text-[16px] shadow-[0_8px_20px_rgba(223,89,242,0.3)] hover:shadow-[0_8px_30px_rgba(223,89,242,0.5)] transition-all"
                       >
-                        {t("ctaReadMore")}
+                        View Case Study
                       </motion.button>
                     </div>
                   </div>

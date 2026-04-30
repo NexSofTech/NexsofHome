@@ -89,16 +89,11 @@ export function HeroContent() {
               </p>
 
               {/* Horizontal line */}
-              <div className="w-[80%] max-w-[320px] h-px bg-white/20 my-1" />
+              <div className="w-[80%] max-w-[320px] h-px bg-white/20 my-4" />
 
-              <ul className="flex flex-col gap-4">
-                {features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckIcon />
-                    <span className="text-white/80 text-[0.9rem] leading-relaxed font-medium">{f}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-white/80 text-[0.95rem] leading-relaxed font-medium">
+                {t("description")}
+              </p>
 
               <div className="flex gap-4 flex-wrap mt-4">
                 <a

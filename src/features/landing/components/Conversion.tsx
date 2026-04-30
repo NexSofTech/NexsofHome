@@ -57,34 +57,22 @@ export function Conversion() {
             <h2 
               className="text-4xl md:text-[2.75rem] font-bold mb-4 leading-tight text-white tracking-tight font-display"
             >
-              Next-Gen Apps & Websites, AI-Powered
+              Let’s Make Something Great Together
             </h2>
-            <p className="text-[1.2rem] font-medium mb-10 text-white/90">
-              <span className="bg-linear-to-r from-[#e879f9] to-[#3b82f6] bg-clip-text text-transparent font-bold">Nexsof</span>{" "}
-              – Custom Software Development Company
-            </p>
 
-            <div className="w-full h-px bg-white/10 mb-10"></div>
+            <div className="w-full h-px bg-white/10 mb-8 mt-6"></div>
 
-            <ul className="flex flex-col gap-6 text-[1.05rem] text-white/80 mb-14">
-              {checkItems.map((text, i) => (
-                <motion.li 
-                  key={i} 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 + (i * 0.1) }}
-                  className="flex items-center gap-4"
-                >
-                  {/* Check icon */}
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="shrink-0">
-                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="white" strokeWidth="2" />
-                    <path d="M7.5 12L10.5 15L16.5 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span className="leading-snug">{text}</span>
-                </motion.li>
-              ))}
-            </ul>
+            <div className="flex flex-col gap-4 text-[1.05rem] text-white/80 mb-10 leading-relaxed">
+              <p>
+                From your first idea to a fully launched digital product, NEXSOF is your partner at every step. We bring the technology, the strategy, and the team so you can focus on what matters most, growing your business.
+              </p>
+              <p>
+                We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions has been proved for all the domains and it is being implemented to every industry. We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions has been proved for all the domains and it is being implemented to every industry.
+              </p>
+              <p>
+                We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions.
+              </p>
+            </div>
 
             <div className="flex flex-wrap items-center gap-5">
               <button className="bg-linear-to-r from-[#d946ef] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3.5 rounded-xl shadow-lg hover:shadow-[0_8px_25px_rgba(217,70,239,0.3)] hover:-translate-y-0.5 transition-all">

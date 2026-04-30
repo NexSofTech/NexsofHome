@@ -69,6 +69,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
       {children}
     </NextIntlClientProvider>
   );

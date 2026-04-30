@@ -26,10 +26,27 @@ const images = [
 export function FeatureSection() {
   const t = useTranslations("feature");
 
-  const features = [
-    t("item1"),
-    t("item2"),
-    t("item3"),
+  const featuresList = [
+    {
+      title: "Why SaaS Platforms Are the Future of Business Infrastructure",
+      desc: "The shift from service-based to product-driven models is accelerating. Discover how SaaS platforms are reshaping how businesses operate, scale, and generate recurring revenue in the digital age."
+    },
+    {
+      title: "How Digital Automation Is Transforming Business Operations",
+      desc: "Manual processes are the biggest productivity bottleneck. We explore how intelligent automation platforms help companies cut costs, boost efficiency, and free their teams to focus on growth."
+    },
+    {
+      title: "Building for the Creator Economy: Tools, Platforms and Opportunities",
+      desc: "The creator economy is one of the fastest-growing sectors globally. Learn how NEXSOF helps creators and brands build the digital infrastructure they need to monetize, grow, and engage their audiences."
+    },
+    {
+      title: "The Rise of AI-Driven Business Solutions",
+      desc: "Artificial intelligence is no longer optional, it is foundational. Explore how AI-powered platforms are helping businesses make smarter decisions, personalize customer experiences, and unlock new levels of efficiency."
+    },
+    {
+      title: "Data as a Growth Engine: Turning Insights into Action",
+      desc: "Data is the new currency of innovation. Discover how advanced analytics and real-time insights empower businesses to make informed decisions, optimize performance, and drive sustainable growth."
+    }
   ];
 
   return (
@@ -47,19 +64,11 @@ export function FeatureSection() {
             <h2
               className="text-[2.5rem] md:text-[3.25rem] font-bold text-[#18181b] leading-[1.1] font-display"
             >
-              {t("title")}
+              NEXSOF is simply at the forefront of the digital industry.
             </h2>
 
-            <p className="text-[1.25rem] font-semibold bg-linear-to-r from-[#d919a4] via-[#7526f2] to-[#1a6bf0] bg-clip-text text-transparent w-fit">
-              {t("subtitle")}
-            </p>
-
-            <p className="text-[#52525b] text-[0.95rem] leading-[1.7] max-w-[520px]">
-              {t("description")}
-            </p>
-
-            <div className="space-y-5 pt-2">
-              {features.map((text, index) => (
+            <div className="space-y-6 pt-2">
+              {featuresList.map((proc, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -68,13 +77,16 @@ export function FeatureSection() {
                   transition={{ delay: index * 0.15 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-[44px] h-[44px] rounded-xl bg-linear-to-br from-[#df59f2] to-[#3f5cf0] flex items-center justify-center flex-shrink-0">
-                    <StarIcon />
+                  <div className="w-[44px] h-[44px] mt-1 rounded-xl bg-linear-to-br from-[#df59f2] to-[#3f5cf0] flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">{index + 1}</span>
                   </div>
 
-                  <p className="text-[#52525b] text-[0.9rem] leading-[1.7]">
-                    {text}
-                  </p>
+                  <div>
+                    <h3 className="text-[#18181b] font-bold text-[1.1rem] mb-1 font-display">{proc.title}</h3>
+                    <p className="text-[#52525b] text-[0.9rem] leading-[1.7]">
+                      {proc.desc}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>

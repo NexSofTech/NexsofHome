@@ -11,14 +11,11 @@
   },
   "hero": {
     "badge": "Trusted by 25,000+ Businesses Across India",
-    "title": "Your Software Partner,",
-    "titleHighlight": "Built in Lucknow.",
-    "subtitle": "nexsof.tech",
-    "subtitleSuffix": "– One stop solution for all your software needs.",
-    "feature1": "Custom websites, mobile apps & enterprise software built for growth.",
-    "feature2": "AI-powered automation that saves time and cuts operational costs.",
-    "feature3": "ERP, CRM & business tools tailored to how your team actually works.",
-    "feature4": "From idea to launch — we handle strategy, design, and delivery.",
+    "title": "Build Scalable Digital Products",
+    "titleHighlight": "That Drive Real Growth",
+    "subtitle": "Next-Gen Websites and Applications",
+    "subtitleSuffix": "",
+    "description": "NEXSOF Corporation delivers cutting-edge custom software, SaaS platforms, and AI-powered web applications built to empower businesses, creators, and startups worldwide. From idea to launch, we engineer your digital future.",
     "ctaPrimary": "Start Your Project",
     "ctaPhone": "+91-8189010044"
   },
@@ -59,26 +56,30 @@
     "subtitle": "Behind Your Project"
   },
   "portfolio": {
-    "title": "A Portfolio of Our Projects",
-    "description": "Every project in our portfolio represents a real business problem we helped solve. We've built enterprise ERPs for manufacturers, booking platforms for service businesses, AI-powered tools for healthcare providers, and e-commerce systems for retailers. Here's a look at some of our recent work.",
-    "ctaAll": "See All Projects",
+    "title": "Insights and Resources",
+    "description": "NEXSOF is simply at the forefront of the digital industry.",
+    "ctaAll": "See All Resources",
     "ctaReadMore": "Read More",
     "items": [
       {
-        "title": "Enterprise ERP System",
-        "description": "A full-scale ERP platform built for a mid-sized manufacturer in UP — covering inventory, procurement, production, HR, and finance in a single unified system."
+        "title": "Why SaaS Platforms Are the Future of Business Infrastructure",
+        "description": "The shift from service-based to product-driven models is accelerating. Discover how SaaS platforms are reshaping how businesses operate, scale, and generate recurring revenue in the digital age."
       },
       {
-        "title": "AI-Powered Analytics Dashboard",
-        "description": "A real-time business intelligence dashboard with ML-driven sales forecasting and anomaly detection, built for a logistics company managing 500+ daily shipments."
+        "title": "How Digital Automation Is Transforming Business Operations",
+        "description": "Manual processes are the biggest productivity bottleneck. We explore how intelligent automation platforms help companies cut costs, boost efficiency, and free their teams to focus on growth."
       },
       {
-        "title": "Custom CRM Platform",
-        "description": "A tailored CRM built from scratch for a B2B sales team — with lead scoring, automated follow-up workflows, and deep integration with WhatsApp Business API."
+        "title": "Building for the Creator Economy: Tools, Platforms and Opportunities",
+        "description": "The creator economy is one of the fastest-growing sectors globally. Learn how NEXSOF helps creators and brands build the digital infrastructure they need to monetize, grow, and engage their audiences."
       },
       {
-        "title": "Healthcare Management App",
-        "description": "A cross-platform mobile app for a multi-clinic healthcare provider — handling appointments, prescriptions, patient records, and billing across 12 locations."
+        "title": "The Rise of AI-Driven Business Solutions",
+        "description": "Artificial intelligence is no longer optional, it is foundational. Explore how AI-powered platforms are helping businesses make smarter decisions, personalize customer experiences, and unlock new levels of efficiency."
+      },
+      {
+        "title": "Data as a Growth Engine: Turning Insights into Action",
+        "description": "Data is the new currency of innovation. Discover how advanced analytics and real-time insights empower businesses to make informed decisions, optimize performance, and drive sustainable growth."
       }
     ]
   }

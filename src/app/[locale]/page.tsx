@@ -10,6 +10,7 @@ import {
 } from "@/features/landing";
 import { FeatureSection } from "@/features/landing/components/FeatureSection";
 import { Technologies } from "@/features/landing/components/Technologies";
+import { Footer } from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
@@ -30,16 +31,7 @@ export default function HomePage() {
       <Technologies />
       <Portfolio />
       <Testimonials />
-      {/* Placeholder sections for navigation testing */}
-      <section id="service" className="min-h-[50vh] flex items-center justify-center bg-gray-50 border-t">
-        <h2 className="text-2xl text-gray-400 font-bold uppercase tracking-widest">Our Services Section</h2>
-      </section>
-      <section id="technologies" className="min-h-[50vh] flex items-center justify-center bg-white border-t">
-        <h2 className="text-2xl text-gray-400 font-bold uppercase tracking-widest">Technologies Section</h2>
-      </section>
-      <section id="blog" className="min-h-[50vh] flex items-center justify-center bg-gray-50 border-t">
-        <h2 className="text-2xl text-gray-400 font-bold uppercase tracking-widest">Our Blog Section</h2>
-      </section>
+      <Footer />
     </main>
   );
 }
