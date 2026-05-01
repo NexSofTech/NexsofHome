@@ -136,7 +136,7 @@ export function Conversion() {
               {/* Phone Mockup */}
               <div className="relative z-30 w-[210px] h-[400px] bg-white rounded-[2.5rem] border-[10px] border-[#1f2023] shadow-2xl translate-y-16 shrink-0 flex justify-center overflow-hidden">
                 <img 
-                  src="/mob3.png" 
+                  src="/mob4.png" 
                   alt="Mobile app preview" 
                   className="w-full h-full object-cover"
                 />
