@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   "home", "service", "expertise", "industries", "technologies", "about", "blog",
@@ -89,12 +90,19 @@ export function Navbar() {
     <header className="relative w-full z-50 px-6 md:px-10 h-[88px] flex items-center bg-transparent">
       <div className="w-full flex items-center gap-16">
         {/* Logo */}
-        <a href="#" id="logo" className="flex items-center shrink-0">
+        <motion.a 
+          href="#" 
+          id="logo" 
+          className="flex items-center shrink-0"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <picture>
             <source media="(max-width: 399px)" srcSet="/logo2.png" />
             <img src="/logo.png" alt="nexsof.tech logo" className="h-[46px] object-contain" />
           </picture>
-        </a>
+        </motion.a>
 
         {/* Desktop nav */}
         <nav 
@@ -103,12 +111,15 @@ export function Navbar() {
           aria-label="Main navigation"
           onMouseLeave={() => setHoveredSection(null)}
         >
-          {NAV_LINKS.map((key) => (
-            <a
+          {NAV_LINKS.map((key, i) => (
+            <motion.a
               key={key}
               href={`#${key}`}
               id={`nav-${key}`}
               onMouseEnter={() => setHoveredSection(key)}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 + i * 0.05 }}
               className={`relative text-[1.2rem] px-3 py-1.5 rounded-md transition-colors duration-300 ${
                 activeSection === key || hoveredSection === key
                   ? "text-white font-light"
@@ -116,7 +127,7 @@ export function Navbar() {
               }`}
             >
               {t(key)}
-            </a>
+            </motion.a>
           ))}
 
           {/* Sliding Indicator */}

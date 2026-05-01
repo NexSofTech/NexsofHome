@@ -33,7 +33,7 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section className="px-4 py-20 bg-white">
+    <section className="px-4 py-20 bg-white overflow-hidden" id="blog">
       <div className="max-w-[1600px] mx-auto">
         <div className="relative rounded-[2.5rem] bg-[#18181b] overflow-hidden px-6 py-16 lg:px-8 lg:py-16 shadow-2xl">
           

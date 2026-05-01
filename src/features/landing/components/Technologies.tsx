@@ -34,7 +34,7 @@ export function Technologies() {
   });
 
   return (
-    <section className="px-4 py-20 bg-[#f5f5f5]">
+    <section className="px-4 py-20 bg-[#f5f5f5]" id="technologies">
       <div className="max-w-[1600px] mx-auto">
         <div className="relative rounded-[28px] bg-[#0b0b0f] overflow-hidden px-6 py-24 lg:px-10 lg:py-32">
           {/* Solid Spheres */}

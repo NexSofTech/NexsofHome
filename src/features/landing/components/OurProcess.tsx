@@ -30,7 +30,7 @@ export function Services() {
   const t = useTranslations("services");
 
   return (
-    <section className="bg-white py-24 px-4 relative" id="industries">
+    <section className="bg-white py-24 px-4 relative overflow-hidden" id="expertise">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start relative">
           {/* Left: title (Sticky) */}

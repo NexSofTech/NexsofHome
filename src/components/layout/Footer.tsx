@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter } from "react-icons/fa";
 
@@ -13,7 +14,7 @@ function MapPinIcon() {
 
 const LINK_COLUMNS = [
   {
-    heading: "Lorem Ipsum",
+    heading: "Our Services",
     links: [
       "Lorem Ipsum Text",
       "Lorem Ipsum Text",
@@ -25,7 +26,7 @@ const LINK_COLUMNS = [
     ],
   },
   {
-    heading: "Lorem Ipsum",
+    heading: "Company",
     links: [
       "Lorem Ipsum Text",
       "Lorem Ipsum Text",
@@ -37,7 +38,7 @@ const LINK_COLUMNS = [
     ],
   },
   {
-    heading: "Lorem Ipsum",
+    heading: "Community",
     links: [
       "Lorem Ipsum Text",
       "Lorem Ipsum Text",
@@ -52,7 +53,7 @@ const LINK_COLUMNS = [
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#0d0a0d] text-white rounded-t-[50px] md:rounded-t-[70px] overflow-hidden relative">
+    <footer className="w-full bg-[#0d0a0d] text-white rounded-t-[50px] md:rounded-t-[70px] overflow-hidden relative" id="contact">
 
       {/* ── MAGENTA-PURPLE RADIAL GRADIENT ────────────────────────────── */}
       <div
@@ -82,21 +83,31 @@ export function Footer() {
       <div className="relative z-10 w-full">
 
         {/* HERO TEXT */}
-        <div className="text-center pt-20 pb-24 px-6 max-w-3xl mx-auto">
+        <motion.div 
+          className="text-center pt-20 pb-24 px-6 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-4xl md:text-5xl lg:text-[3.6rem] font-bold leading-tight mb-7 font-display tracking-tight">
             Let's make something<br />great together.
           </h2>
           <p className="text-gray-300 text-[14px] md:text-[15px] leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas.
-            Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue
-            sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt.
+            From your first idea to a fully launched digital product, NEXSOF is your partner at every step. We bring the technology, the strategy, and the team so you can focus on what matters most, growing your business.
           </p>
-        </div>
+        </motion.div>
 
         {/* MIDDLE ROW: Text + Locations */}
         <div className="px-8 md:px-16 lg:px-24 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Text */}
-          <div className="lg:col-span-6 flex flex-col gap-5">
+          <motion.div 
+            className="lg:col-span-6 flex flex-col gap-5"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <p className="text-gray-300 text-[13.5px] leading-relaxed">
               From your first idea to a fully launched digital product, NEXSOF is your partner at every step. We bring the technology, the strategy, and the team so you can focus on what matters most, growing your business.
             </p>
@@ -106,10 +117,16 @@ export function Footer() {
             <p className="text-gray-300 text-[13.5px] leading-relaxed">
               We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions.
             </p>
-          </div>
+          </motion.div>
 
           {/* Right Locations */}
-          <div className="lg:col-span-5 lg:col-start-8 flex flex-row gap-12 pt-2">
+          <motion.div 
+            className="lg:col-span-5 lg:col-start-8 flex flex-row gap-12 pt-2"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <div className="flex flex-col gap-3">
               <MapPinIcon />
               <p className="text-gray-300 text-[13px] leading-relaxed">
@@ -125,19 +142,35 @@ export function Footer() {
                 Oasis, Dubai
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* GRADIENT DIVIDER + LET'S TALK BUTTON */}
         <div className="relative w-full flex items-center px-8 md:px-16 lg:px-24 mb-14">
-          <div className="absolute left-0 right-0 h-[1.5px] bg-gradient-to-r from-[#ec4899] via-[#8b5cf6] to-[#3b82f6] opacity-70" />
-          <button className="relative z-10 bg-gradient-to-r from-[#c026d3] to-[#4f46e5] text-white text-sm font-bold px-8 py-3 rounded-full shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_28px_rgba(168,85,247,0.65)] transition-all">
+          <motion.div 
+            className="absolute left-0 right-0 h-[1.5px] bg-gradient-to-r from-[#ec4899] via-[#8b5cf6] to-[#3b82f6] opacity-70"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.4 }}
+          />
+          <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="relative z-10 bg-gradient-to-r from-[#c026d3] to-[#4f46e5] text-white text-sm font-bold px-8 py-3 rounded-full shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_28px_rgba(168,85,247,0.65)] transition-all"
+          >
             Let's Talk
-          </button>
+          </motion.button>
         </div>
 
         {/* LINKS GRID */}
-        <div className="px-8 md:px-16 lg:px-24 mb-16">
+        <motion.div 
+          className="px-8 md:px-16 lg:px-24 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 relative">
 
             {/* Vertical dividers */}
@@ -204,12 +237,12 @@ export function Footer() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* COPYRIGHT BAR */}
         <div className="mx-6 md:mx-10 mb-6 bg-[#27272a] rounded-[30px] px-6 py-4 text-center">
           <p className="text-gray-400 text-[12.5px]">
-            Copyright © 2020 Softfix. All Rights Reserved. An ISO 27001:2022, ISO 9001:2015 Certified
+            Copyright © 2024 Nexsof Corporation. All Rights Reserved. An ISO 27001:2022, ISO 9001:2015 Certified
           </p>
         </div>
 

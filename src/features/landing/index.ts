@@ -1,8 +1,8 @@
 export { Hero } from './components/Hero';
-export { HeroContent } from './components/HeroContent';
+export { HeroContent } from './components/ReachOut';
 export { TrustedBy } from './components/TrustedBy';
 export { EndToEnd } from './components/EndToEnd';
-export { Services } from './components/Services';
+export { Services } from './components/OurProcess';
 export { Team } from './components/Team';
 export { Conversion } from './components/Conversion';
 export { Portfolio } from './components/Portfolio';

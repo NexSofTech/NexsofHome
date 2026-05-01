@@ -54,33 +54,63 @@ export function Conversion() {
 
           {/* Left Content */}
           <div className="flex-1 text-white lg:pr-12 relative z-10 w-full">
-            <h2 
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="text-4xl md:text-[2.75rem] font-bold mb-4 leading-tight text-white tracking-tight font-display"
             >
               Let’s Make Something Great Together
-            </h2>
+            </motion.h2>
 
-            <div className="w-full h-px bg-white/10 mb-8 mt-6"></div>
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="w-full h-px bg-white/10 mb-8 mt-6"
+            ></motion.div>
 
             <div className="flex flex-col gap-4 text-[1.05rem] text-white/80 mb-10 leading-relaxed">
-              <p>
-                From your first idea to a fully launched digital product, NEXSOF is your partner at every step. We bring the technology, the strategy, and the team so you can focus on what matters most, growing your business.
-              </p>
-              <p>
-                We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions has been proved for all the domains and it is being implemented to every industry. We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions has been proved for all the domains and it is being implemented to every industry.
-              </p>
-              <p>
-                We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions.
-              </p>
+              {[
+                "From your first idea to a fully launched digital product, NEXSOF is your partner at every step. We bring the technology, the strategy, and the team so you can focus on what matters most, growing your business.",
+                "We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions has been proved for all the domains and it is being implemented to every industry. We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions has been proved for all the domains and it is being implemented to every industry.",
+                "We provide technology solutions to organizations and industries across the globe. Significance of blockchain and other IT solutions."
+              ].map((text, i) => (
+                <motion.p
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
+                >
+                  {text}
+                </motion.p>
+              ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-5">
-              <button className="bg-linear-to-r from-[#d946ef] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3.5 rounded-xl shadow-lg hover:shadow-[0_8px_25px_rgba(217,70,239,0.3)] hover:-translate-y-0.5 transition-all">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="flex flex-wrap items-center gap-5"
+            >
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-linear-to-r from-[#d946ef] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3.5 rounded-xl shadow-lg hover:shadow-[0_8px_25px_rgba(217,70,239,0.3)] hover:-translate-y-0.5 transition-all"
+              >
                 Get Started
-              </button>
+              </motion.button>
               
               {/* Gradient Border Button */}
-              <div className="relative group cursor-pointer inline-block">
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative group cursor-pointer inline-block"
+              >
                 {/* Gradient background serving as border */}
                 <div className="absolute inset-0 bg-linear-to-r from-[#d946ef] to-[#2563eb] rounded-xl p-[2px] transition-transform group-hover:scale-[1.02]">
                   {/* Inner dark background */}
@@ -94,8 +124,8 @@ export function Conversion() {
                 <button className="relative opacity-0 text-[0.95rem] px-8 py-3.5 border-2 border-transparent">
                   +91-8189010044
                 </button>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
 
           {/* Right Visual / CSS Art */}
@@ -104,9 +134,14 @@ export function Conversion() {
             <div className="w-[400px] h-[360px] rounded-[3rem] bg-linear-to-r from-[#f4b7e8] via-[#c689f8] to-[#4e7bff] relative flex items-center justify-center pointer-events-none">
               
               {/* Phone Mockup */}
-              <div className="relative z-30 w-[210px] h-[400px] bg-white rounded-[2.5rem] border-[10px] border-[#1f2023] shadow-2xl translate-y-16 shrink-0 flex justify-center">
+              <div className="relative z-30 w-[210px] h-[400px] bg-white rounded-[2.5rem] border-[10px] border-[#1f2023] shadow-2xl translate-y-16 shrink-0 flex justify-center overflow-hidden">
+                <img 
+                  src="/mob3.png" 
+                  alt="Mobile app preview" 
+                  className="w-full h-full object-cover"
+                />
                 {/* Notch */}
-                <div className="w-[90px] h-[22px] bg-[#1f2023] rounded-b-[1rem] absolute top-0"></div>
+                <div className="w-[90px] h-[22px] bg-[#1f2023] rounded-b-[1rem] absolute top-0 z-40"></div>
               </div>
 
               {/* Floating White Bar 1 */}

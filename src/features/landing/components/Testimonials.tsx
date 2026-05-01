@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useCallback } from "react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -54,25 +55,34 @@ export function Testimonials() {
   return (
     <section className="bg-white pt-[72px] pb-[64px] overflow-hidden relative">
       {/* ── Header ── */}
-      <div className="px-[5vw] pb-[52px]">
+      <motion.div 
+        className="px-[5vw] pb-[52px]"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <h2 className="font-display text-[clamp(2.4rem,5.5vw,4.2rem)] font-black text-[#333] leading-[1.08] tracking-[-0.025em] max-w-[80%] max-[860px]:max-w-full m-0 drop-shadow-[2px_4px_10px_rgba(0,0,0,0.15)]">What Our Clients Say About Us</h2>
-      </div>
+      </motion.div>
 
-      {/* ── Card track (position:relative so ornaments anchor here) ── */}
-      <div className="flex items-stretch w-full overflow-hidden relative pb-[100px]">
-
-        {/* ── Ornament 1: INVERTED — bottom-left, below left peek card ── */}
+      {/* ── Card track ── */}
+      <motion.div 
+        className="flex items-stretch w-full overflow-hidden relative pb-[100px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        {/* Ornaments */}
         <div className="absolute z-0 pointer-events-none bottom-0 left-[4vw] max-[860px]:hidden" aria-hidden>
           <Image src="/Ornament.png" alt="" width={300} height={242} className="block h-auto opacity-90 -scale-y-100" />
         </div>
-
-        {/* ── Ornament 2: NORMAL — upper-right, between center & right peek ── */}
         <div className="absolute z-0 pointer-events-none top-[16px] left-[70%] max-[860px]:hidden" aria-hidden>
           <Image src="/Ornament.png" alt="" width={180} height={145} className="block h-auto opacity-90" />
         </div>
 
         {/* LEFT peek */}
-        <button className="shrink-0 bg-transparent border-none p-0 text-left font-inherit cursor-pointer relative z-10 w-[22vw] min-w-[200px] max-w-[340px] pl-[5vw] flex items-stretch transition-opacity duration-300 max-[860px]:hidden after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_right,#fff_0%,rgba(255,255,255,0.85)_40%,transparent_100%)] after:pointer-events-none after:z-10 after:rounded-lg" onClick={prev} aria-label="Previous testimonial">
+        <button className="shrink-0 bg-transparent border-none p-0 text-left font-inherit cursor-pointer relative z-10 w-[22vw] min-w-[200px] max-w-[340px] pl-[5vw] flex items-stretch transition-all duration-300 max-[860px]:hidden after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_right,#fff_0%,rgba(255,255,255,0.85)_40%,transparent_100%)] after:pointer-events-none after:z-10 after:rounded-lg hover:opacity-80" onClick={prev} aria-label="Previous testimonial">
           <div className="bg-white border border-[#eee] rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.04)] h-full flex flex-col overflow-hidden w-full">
             <div className="px-5 pt-6 pb-7 flex flex-col gap-[10px] flex-1">
               <span className="block text-[0.72rem] text-[#888] tracking-[0.03em]">{tLeft.date}</span>
@@ -84,7 +94,7 @@ export function Testimonials() {
 
         {/* CENTER active */}
         <div className="flex-1 min-w-0 flex items-stretch px-[2vw] relative z-10 max-[860px]:px-[5vw]">
-          <div className="bg-white border border-[#eee] rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.04)] h-full flex flex-col overflow-hidden w-full flex-row max-[860px]:flex-col">
+          <div className="bg-white border border-[#eee] rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.08)] h-full flex flex-col overflow-hidden w-full flex-row max-[860px]:flex-col">
             <div className="relative shrink-0 w-[38%] max-w-[300px] overflow-hidden bg-[#c8c8c8] max-[860px]:w-full max-[860px]:max-w-full max-[860px]:h-[260px]">
               <Image
                 src={tActive.photo}
@@ -103,7 +113,7 @@ export function Testimonials() {
         </div>
 
         {/* RIGHT peek */}
-        <button className="shrink-0 bg-transparent border-none p-0 text-left font-inherit cursor-pointer relative z-10 w-[26vw] min-w-[220px] max-w-[400px] pr-[5vw] flex items-stretch transition-opacity duration-300 max-[860px]:hidden after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_left,#fff_0%,rgba(255,255,255,0.85)_40%,transparent_100%)] after:pointer-events-none after:z-10 after:rounded-lg" onClick={next} aria-label="Next testimonial">
+        <button className="shrink-0 bg-transparent border-none p-0 text-left font-inherit cursor-pointer relative z-10 w-[26vw] min-w-[220px] max-w-[400px] pr-[5vw] flex items-stretch transition-all duration-300 max-[860px]:hidden after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_left,#fff_0%,rgba(255,255,255,0.85)_40%,transparent_100%)] after:pointer-events-none after:z-10 after:rounded-lg hover:opacity-80" onClick={next} aria-label="Next testimonial">
           <div className="bg-white border border-[#eee] rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.04)] h-full flex flex-col overflow-hidden w-full flex-row gap-0">
             <div className="relative shrink-0 w-[130px] min-h-[220px] overflow-hidden bg-[#c8c8c8]">
               <Image
@@ -121,23 +131,23 @@ export function Testimonials() {
             </div>
           </div>
         </button>
-
-      </div>
+      </motion.div>
 
       {/* ── Controls ── */}
       <div className="flex items-center justify-center gap-5 pt-[36px]">
-        <button className="bg-transparent border-none text-[2.2rem] leading-none text-[#007a8c] hover:text-[#005f6e] px-2 cursor-pointer transition-colors duration-200 font-inherit" onClick={prev} aria-label="Previous">‹</button>
+        <motion.button whileHover={{ scale: 1.2 }} className="bg-transparent border-none text-[2.2rem] leading-none text-[#007a8c] hover:text-[#005f6e] px-2 cursor-pointer transition-colors duration-200 font-inherit" onClick={prev} aria-label="Previous">‹</motion.button>
         <div className="flex gap-2 items-center">
           {testimonials.map((_, i) => (
-            <button
+            <motion.button
               key={i}
+              whileHover={{ scale: 1.2 }}
               className={`w-[11px] h-[11px] rounded-full border-none cursor-pointer p-0 transition-all duration-250 ${i === active ? "bg-[#007a8c] scale-125 hover:bg-[#007a8c]" : "bg-[#ccc] hover:bg-[#888]"}`}
               onClick={() => setActive(i)}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}
         </div>
-        <button className="bg-transparent border-none text-[2.2rem] leading-none text-[#007a8c] hover:text-[#005f6e] px-2 cursor-pointer transition-colors duration-200 font-inherit" onClick={next} aria-label="Next">›</button>
+        <motion.button whileHover={{ scale: 1.2 }} className="bg-transparent border-none text-[2.2rem] leading-none text-[#007a8c] hover:text-[#005f6e] px-2 cursor-pointer transition-colors duration-200 font-inherit" onClick={next} aria-label="Next">›</motion.button>
       </div>
     </section>
   );

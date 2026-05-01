@@ -50,7 +50,7 @@ export function FeatureSection() {
   ];
 
   return (
-    <section className="bg-white py-24 px-4 relative">
+    <section className="bg-white py-24 px-4 relative overflow-hidden" id="industries">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 items-center">
           {/* LEFT */}

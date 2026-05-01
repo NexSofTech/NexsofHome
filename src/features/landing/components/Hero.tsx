@@ -92,33 +92,57 @@ export function Hero() {
       <div className="relative z-20 w-full flex-1 flex flex-col items-center justify-center pt-8 md:pt-16">
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-6 px-6 lg:px-12 xl:px-20 h-[50vh] md:h-[60vh] lg:h-auto">
           {/* Left Side: Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="flex flex-col z-20"
-          >
-            <h2 className="text-[2.2rem] md:text-[3.2rem] lg:text-[4rem] font-bold text-white font-display leading-[1.1] mb-4 md:mb-6">
-              Global Reach,<br />
+          <div className="flex flex-col z-20">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-[2.5rem] md:text-[3.2rem] lg:text-[4rem] font-bold text-white font-display leading-[1.1] mb-4 md:mb-6"
+            >
+              Build Scalable <br />
               <span className="bg-linear-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
-                Local Impact
+                Digital Products That Drive Real Growth
               </span>
-            </h2>
+            </motion.h2>
             
-            <div className="w-16 md:w-24 h-[3px] md:h-[4px] bg-linear-to-r from-brand-pink via-brand-purple to-transparent mb-4 md:mb-6" />
+            <motion.div 
+              initial={{ opacity: 0, width: 0 }}
+              whileInView={{ opacity: 1, width: "6rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="h-[3px] md:h-[4px] bg-linear-to-r from-brand-pink via-brand-purple to-transparent mb-4 md:mb-6" 
+            />
 
-            <p className="text-[1rem] md:text-[1.1rem] text-white/80 max-w-lg mb-6 md:mb-10 leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-[1rem] md:text-[1.1rem] text-white/80 max-w-lg mb-6 md:mb-10 leading-relaxed"
+            >
               We deliver cutting-edge technology solutions to businesses across the globe. 
               No matter where you are located, our team is ready to scale your digital presence 
               and accelerate your growth.
-            </p>
-            <div className="flex gap-4">
-              <a href="#contact" className="bg-linear-to-r from-brand-pink to-brand-purple text-white px-6 py-3 md:px-8 md:py-3.5 rounded-full font-semibold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all">
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex gap-4"
+            >
+              <motion.a 
+                href="#contact" 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-linear-to-r from-brand-pink to-brand-purple text-white px-6 py-3 md:px-8 md:py-3.5 rounded-full font-semibold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all"
+              >
                 Work With Us
-              </a>
-            </div>
-          </motion.div>
+              </motion.a>
+            </motion.div>
+          </div>
           
           {/* Right Side: Globe */}
           <div className="relative h-full min-h-[300px] lg:h-[500px] w-full z-10 flex items-center justify-center lg:translate-x-12">
@@ -147,7 +171,7 @@ export function Hero() {
                     <img
                       src={logo.logoUrl}
                       alt={logo.name}
-                      className={`h-6 md:h-10 w-auto object-contain transition-all duration-400 hover:scale-110 ${logo.invert ? "brightness-0 invert" : ""}`}
+                      className={`h-6 md:h-10 w-auto object-contain transition-all duration-400 hover:scale-110 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 ${logo.invert ? "brightness-0 invert" : ""}`}
                     />
                   </div>
                 ))}

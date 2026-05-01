@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const BRANDS = [
   "Soda", "inter", "Atlassian", "ClickTravel", "Notion", "eToro", "OneBlock", "Cemex",
@@ -10,9 +11,15 @@ export function TrustedBy() {
 
   return (
     <section className="bg-dark-900 overflow-hidden py-8" aria-label="Trusted by">
-      <p className="text-center text-[0.68rem] font-bold tracking-[0.2em] text-white/30 uppercase mb-6">
-        {t("label")}
-      </p>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <p className="text-center text-[0.68rem] font-bold tracking-[0.2em] text-white/30 uppercase mb-6">
+          {t("label")}
+        </p>
 
       <div
         className="overflow-hidden"
@@ -32,6 +39,7 @@ export function TrustedBy() {
           ))}
         </div>
       </div>
+      </motion.div>
     </section>
   );
 }

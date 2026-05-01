@@ -17,7 +17,7 @@ const SERVICES = [
   {
     title: "Custom Software Development",
     desc: "Off-the-shelf software rarely fits perfectly. We design and build custom applications from the ground up — tailored to your workflows, your team, and your customers. No unnecessary bloat, just what you actually need.",
-    icon: "hgi-code-01",
+    icon: "hgi-settings-02",
   },
   {
     title: "ERP Systems",
@@ -27,7 +27,7 @@ const SERVICES = [
   {
     title: "CRM Software",
     desc: "Your customer relationships deserve better than a cluttered inbox. Our CRM solutions help you track leads, manage follow-ups, and close deals faster — built specifically for how your sales and support teams operate.",
-    icon: "hgi-user-group-01",
+    icon: "hgi-database-02",
   },
   {
     title: "AI-Powered Solutions",
@@ -55,7 +55,7 @@ export function EndToEnd() {
   const t = useTranslations("endToEnd");
 
   return (
-    <section className="bg-white py-24 px-4 relative overflow-hidden" id="expertise">
+    <section className="bg-white py-24 px-4 relative overflow-hidden" id="service">
       {/* Background Orbs pinned to max-width container */}
       <div className="absolute inset-0 mx-auto max-w-[1600px] pointer-events-none z-0">
         <div className="absolute top-[60px] -left-[35px] w-16 h-16 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] opacity-90"></div>
