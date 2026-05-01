@@ -7,10 +7,10 @@ export function Conversion() {
   const t = useTranslations("conversion"); // We can use translations if needed later
 
   const checkItems = [
-    "Custom websites and mobile apps built with real users in mind — not just templates.",
+    "Custom websites and mobile apps built with real users in mind, not just templates.",
     "ERP & CRM systems designed around your actual business processes, not the other way around.",
     "AI-powered automation that eliminates manual, repetitive work from your daily operations.",
-    "Transparent timelines and real communication — you'll always know where your project stands."
+    "Transparent timelines and real communication, you'll always know where your project stands."
   ];
 
   return (

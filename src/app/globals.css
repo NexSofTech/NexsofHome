@@ -59,6 +59,10 @@ button { cursor: pointer; font-family: inherit; }
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+@keyframes heroTickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
 @keyframes floatCard {
   0%   { transform: translateY(0)    rotate(-1deg); }
   100% { transform: translateY(-12px) rotate(0deg); }
@@ -137,6 +141,12 @@ button { cursor: pointer; font-family: inherit; }
   width: max-content;
   white-space: nowrap;
   animation: tickerScroll 30s linear infinite;
+}
+.hero-ticker-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: heroTickerScroll 50s linear infinite;
 }
 
 /* ── Mockup animations ────────────────────────────────── */

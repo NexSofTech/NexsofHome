@@ -90,7 +90,10 @@ export function Navbar() {
       <div className="w-full flex items-center gap-16">
         {/* Logo */}
         <a href="#" id="logo" className="flex items-center shrink-0">
-          <img src="/logo.png" alt="nexsof.tech logo" className="h-[46px] object-contain" />
+          <picture>
+            <source media="(max-width: 399px)" srcSet="/logo2.png" />
+            <img src="/logo.png" alt="nexsof.tech logo" className="h-[46px] object-contain" />
+          </picture>
         </a>
 
         {/* Desktop nav */}

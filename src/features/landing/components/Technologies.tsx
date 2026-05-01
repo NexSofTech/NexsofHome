@@ -8,18 +8,18 @@ const technologies = [
   { name: "Angular", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" },
   { name: "Vue", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
   { name: "HTML5", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png" },
-  { name: "CSS3", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/css/css.png" },
+  { name: "CSS3", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/css/css.png", invert: true },
   { name: "JavaScript", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png" },
   { name: "Tailwind", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
   { name: "Node.js", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
-  { name: "Claude", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg" },
-  { name: "Gemini", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlegemini.svg" },
-  { name: "OpenAI", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" },
-  { name: "Github", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+  { name: "Claude", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg", invert: true},
+  { name: "Gemini", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlegemini.svg", invert: true },
+  { name: "OpenAI", logoUrl: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg", invert: true },
+  { name: "Github", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", invert: true },
   { name: "VS Code", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
   { name: "Typescript", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png" },
   { name: "Python", logoUrl: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png" },
-  { name: "Docker", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+  { name: "Docker", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" } 
 ];
 
 export function Technologies() {
@@ -44,13 +44,13 @@ export function Technologies() {
           <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] items-center">
             {/* LEFT TEXT */}
             <div>
-              <h2 className="text-[3rem] font-bold leading-[1.1] bg-linear-to-r from-[#d919a4] via-[#7b5cff] to-[#1a6bf0] bg-clip-text text-transparent mb-4 font-display">
+              <h2 className="text-[2.2rem] md:text-[3rem] font-bold leading-[1.1] bg-linear-to-r from-[#d919a4] via-[#7b5cff] to-[#1a6bf0] bg-clip-text text-transparent mb-4 font-display">
                 {t("title")}
               </h2>
 
-              <div className="w-full h-[4px] bg-linear-to-r from-[#d919a4] via-[#7b5cff] to-transparent mb-2 -ml-16" />
+              <div className="w-full h-[4px] bg-linear-to-r from-[#d919a4] via-[#7b5cff] to-transparent mb-2 md:-ml-16" />
 
-              <p className="text-white/90 text-[2.6rem] font-semibold font-display">
+              <p className="text-white/90 text-[1.8rem] md:text-[2.6rem] font-semibold font-display">
                 {t("subtitle")}
               </p>
             </div>
@@ -82,7 +82,7 @@ export function Technologies() {
                         <img 
                           src={tech.logoUrl} 
                           alt={tech.name} 
-                          className="w-20 h-20 object-contain transition-transform group-hover:scale-110 opacity-90 group-hover:opacity-100 duration-300" 
+                          className={`w-20 h-20 object-contain transition-transform group-hover:scale-110 opacity-90 group-hover:opacity-100 duration-300 ${tech.invert ? "brightness-0 invert" : ""}`} 
                         />
                       </div>
                     ))}
@@ -119,7 +119,7 @@ export function Technologies() {
                           <img 
                             src={tech.logoUrl} 
                             alt={tech.name} 
-                            className="w-14 h-14 object-contain opacity-100" 
+                            className={`w-14 h-14 object-contain opacity-100 ${tech.invert ? "brightness-0 invert" : ""}`} 
                           />
                         </div>
                       ))}
