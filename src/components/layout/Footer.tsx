@@ -116,16 +116,9 @@ export function Footer() {
             <div className="flex flex-col gap-3">
               <MapPinIcon />
               <p className="text-gray-300 text-[13px] leading-relaxed">
-                1st Floor, CP/140, Viraj Khand-4,<br />
-                Gomti Nagar Lucknow, Uttar Pradesh<br />
-                226010
-              </p>
-            </div>
-            <div className="flex flex-col gap-3">
-              <MapPinIcon />
-              <p className="text-gray-300 text-[13px] leading-relaxed">
-                105, 1ST Floor Apricot Tower Silicon<br />
-                Oasis, Dubai
+                Jankipuram, sahara states,<br />
+                sahara complex Shop number 208, 209,<br />
+                Uttar Pradesh 226021
               </p>
             </div>
           </motion.div>

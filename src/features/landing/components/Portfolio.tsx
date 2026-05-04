@@ -61,7 +61,7 @@ export function Portfolio() {
                 viewport={{ once: true }}
                 className="text-4xl lg:text-5xl font-bold text-white font-display"
               >
-                PortFolio
+                Portfolio
               </motion.h2>
 
               <motion.button
@@ -97,7 +97,7 @@ export function Portfolio() {
             </svg>
             <div className="absolute top-1/2 left-10 right-10 h-[2px] bg-white/60 -translate-y-1/2 z-0" />
             <div className="flex justify-between relative z-10 w-full">
-              {[...Array(projects.length)].map((_, i) => (
+              {[...Array(5)].map((_, i) => (
                 <div key={i} className="relative group flex items-center justify-center">
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}

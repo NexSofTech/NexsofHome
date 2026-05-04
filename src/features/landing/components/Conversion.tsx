@@ -107,26 +107,6 @@ export function Conversion() {
                 Get Started
               </motion.button>
               
-              {/* Gradient Border Button */}
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative group cursor-pointer inline-block"
-              >
-                {/* Gradient background serving as border */}
-                <div className="absolute inset-0 bg-linear-to-r from-[#d946ef] to-[#2563eb] rounded-xl p-[2px] transition-transform group-hover:scale-[1.02]">
-                  {/* Inner dark background */}
-                  <div className="w-full h-full bg-[#18181b] rounded-[10px] flex items-center justify-center">
-                    <span className="text-white font-bold text-[0.95rem] px-8 py-3.5 whitespace-nowrap">
-                      +91-8189010044
-                    </span>
-                  </div>
-                </div>
-                {/* Invisible button to maintain sizing and clickability */}
-                <button className="relative opacity-0 text-[0.95rem] px-8 py-3.5 border-2 border-transparent">
-                  +91-8189010044
-                </button>
-              </motion.div>
             </motion.div>
           </div>
 

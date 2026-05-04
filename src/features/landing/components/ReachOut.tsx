@@ -29,7 +29,7 @@ function DeviceMockup() {
 
       {/* Main purple gradient card */}
       <div className="absolute right-0 bottom-0 w-[85%] h-[90%] bg-gradient-to-br from-[#802273] via-[#4d2165] to-[#251b3f] rounded-3xl">
-        
+
         {/* White phone mockup */}
         <div className="absolute right-6 bottom-0 w-[140px] h-[85%] bg-white rounded-t-3xl shadow-2xl overflow-hidden border border-white/20">
           <div className="absolute top-0 left-[25%] w-[50%] h-4 bg-black rounded-b-xl" />
@@ -40,7 +40,7 @@ function DeviceMockup() {
       {/* Overlapping white floating bars (input-like) */}
       <div className="absolute left-[-20px] top-[40%] w-[180px] h-[40px] bg-white rounded-lg shadow-xl shadow-black/20" />
       <div className="absolute left-[10px] top-[70%] w-[150px] h-[35px] bg-white rounded-lg shadow-xl shadow-black/20" />
-      
+
       {/* Left side blob */}
       <span className="absolute w-12 h-12 rounded-full bg-brand-purple/50 shadow-[0_0_30px_rgba(168,85,247,0.5)] blur-md top-[35%] left-[-30px] -z-10" />
 
@@ -56,16 +56,16 @@ export function HeroContent() {
     <section className="bg-[#f8f9fe] py-20 px-4 relative overflow-hidden" id="service">
       {/* Container for the dark card */}
       <div className="max-w-[1600px] mx-auto relative">
-        
+
         {/* Subtle purple glow behind the card top-left */}
         <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-brand-purple/40 blur-[40px] z-0" />
 
         {/* The Dark Card */}
         <div className="relative z-10 bg-[#1e1e1e] rounded-[2rem] p-10 md:p-14 shadow-2xl border border-white/5 overflow-hidden">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -103,18 +103,11 @@ export function HeroContent() {
                 >
                   {t("ctaPrimary")}
                 </button>
-                <a
-                  href={`tel:${t("ctaPhone")}`}
-                  id="hero-cta-phone"
-                  className="inline-flex items-center gap-2 text-white text-[0.9rem] font-semibold px-6 py-2.5 rounded-full border border-[rgba(168,85,247,0.4)] bg-[rgba(168,85,247,0.06)] hover:bg-[rgba(168,85,247,0.14)] hover:border-[rgba(168,85,247,0.65)] hover:-translate-y-0.5 transition-all"
-                >
-                  {t("ctaPhone")}
-                </a>
               </div>
             </motion.div>
 
             {/* Right: device mockup */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
