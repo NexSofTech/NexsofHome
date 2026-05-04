@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Accueil",
-    "service": "Services",
-    "expertise": "Expertise",
-    "industries": "Industries",
-    "technologies": "Technologies",
-    "about": "À propos",
-    "blog": "Blog",
+    "services": "Services",
+    "process": "Processus",
+    "technologies": "Tech",
+    "portfolio": "Portfolio",
+    "team": "Équipe",
+    "testimonials": "Témoignages",
     "cta": "Contactez-nous"
   },
   "hero": {

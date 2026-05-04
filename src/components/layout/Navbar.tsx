@@ -4,9 +4,10 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { getCalApi } from "@calcom/embed-react";
 
 const NAV_LINKS = [
-  "home", "service", "expertise", "industries", "technologies", "about", "blog",
+  "home", "services", "process", "technologies", "portfolio", "team", "testimonials",
 ] as const;
 
 const LOCALES = [
@@ -33,6 +34,13 @@ export function Navbar() {
     segments[1] = locale;
     router.push(segments.join("/") || "/");
   };
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({});
+      cal("ui", {"styles":{"branding":{"brandColor":"#18181b"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    })();
+  }, []);
 
   // Scroll Spy
   useEffect(() => {
@@ -143,7 +151,7 @@ export function Navbar() {
 
         {/* Right */}
         <div className="flex items-center gap-8 shrink-0 ml-auto min-[1460px]:ml-0">
-          {/* Locale switcher */}
+          {/* Locale switcher - Commented out as requested
           <div className="hidden md:block relative">
             <button
               onClick={() => setLocaleDropdownOpen(!localeDropdownOpen)}
@@ -155,7 +163,6 @@ export function Navbar() {
               </svg>
             </button>
             
-            {/* Dropdown Menu */}
             <div 
               className={`absolute top-[calc(100%+8px)] right-0 py-2 w-28 bg-[#12001e] border border-white/10 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.8)] flex flex-col z-50 transition-all duration-300 origin-top-right ${
                 localeDropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
@@ -179,15 +186,15 @@ export function Navbar() {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
-          <a
-            href="#contact"
+          <button
+            data-cal-link="nexsof.tech/30min"
             id="nav-cta"
-            className="hidden md:inline-flex bg-linear-to-r from-brand-pink to-brand-purple text-white text-[1.2rem] font-semibold px-6 py-2.5 rounded-full shadow-[0_4px_20px_rgba(168,85,247,0.45)] hover:shadow-[0_6px_28px_rgba(168,85,247,0.65)] hover:-translate-y-px transition-all"
+            className="cursor-pointer hidden md:inline-flex bg-linear-to-r from-brand-pink to-brand-purple text-white text-[1.2rem] font-semibold px-6 py-2.5 rounded-full shadow-[0_4px_20px_rgba(168,85,247,0.45)] hover:shadow-[0_6px_28px_rgba(168,85,247,0.65)] hover:-translate-y-px transition-all"
           >
             {t("cta")}
-          </a>
+          </button>
 
           {/* Hamburger */}
           <button
@@ -220,13 +227,13 @@ export function Navbar() {
             {t(key)}
           </a>
         ))}
-        <a
-          href="#contact"
+        <button
+          data-cal-link="nexsof.tech/30min"
           onClick={() => setMenuOpen(false)}
-          className="mt-3 bg-gradient-to-r from-brand-pink to-brand-purple text-white font-semibold px-8 py-2.5 rounded-full text-sm"
+          className="cursor-pointer mt-3 bg-gradient-to-r from-brand-pink to-brand-purple text-white font-semibold px-8 py-2.5 rounded-full text-sm"
         >
           {t("cta")}
-        </a>
+        </button>
       </div>
     </header>
   );

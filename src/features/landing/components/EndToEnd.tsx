@@ -55,7 +55,7 @@ export function EndToEnd() {
   const t = useTranslations("endToEnd");
 
   return (
-    <section className="bg-white py-24 px-4 relative overflow-hidden" id="service">
+    <section className="bg-white py-24 px-4 relative overflow-hidden" id="services">
       {/* Background Orbs pinned to max-width container */}
       <div className="absolute inset-0 mx-auto max-w-[1600px] pointer-events-none z-0">
         <div className="absolute top-[60px] -left-[35px] w-16 h-16 rounded-full bg-linear-to-r from-[#d946ef] to-[#8b5cf6] opacity-90"></div>
@@ -106,7 +106,10 @@ export function EndToEnd() {
               We build scalable digital products for businesses of all sizes. Our integrated multi-division model delivers end-to-end solutions. We combine technology, media, and business strategy under one roof. Trusted by thousands of businesses across multiple industries.
             </p>
 
-            <button className="bg-linear-to-r from-[#e879f9] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+            <button 
+              data-cal-link="nexsof.tech/30min"
+              className="cursor-pointer inline-block bg-linear-to-r from-[#e879f9] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+            >
               Get Started
             </button>
           </motion.div>

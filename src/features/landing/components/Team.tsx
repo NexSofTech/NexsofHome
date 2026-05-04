@@ -26,11 +26,11 @@ export function Team() {
   const t = useTranslations("team");
 
   return (
-    <section className="bg-white py-24 px-4 relative" id="about">
+    <section className="bg-white py-24 px-4 relative" id="team">
       <div className="max-w-[1600px] mx-auto">
-        
+
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -49,9 +49,9 @@ export function Team() {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8 border-t-0">
-          
+
           {/* Left Panel - Image Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -67,7 +67,7 @@ export function Team() {
               />
               {/* Gradient Overlay for text readability */}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/90 to-transparent h-[70%]" />
-              
+
               {/* Text Content */}
               <div className="relative z-10 px-8 pb-10">
                 <p className="text-white text-[1.05rem] leading-[1.6] font-medium">
@@ -80,13 +80,13 @@ export function Team() {
           {/* Right Panel - 2x2 Feature Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[1, 2, 3, 4].map((i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-[#b3b3b3] rounded-[1.8rem] px-8 py-10 flex flex-col items-start border border-[#b3b3b3]"
+                className="bg-[#2e2e35] rounded-[1.8rem] px-8 py-10 flex flex-col items-start border border-[#b3b3b3]"
               >
                 {/* Icon Container */}
                 <div className="w-[52px] h-[52px] rounded-2xl bg-gradient-to-br from-[#df59f2] to-[#3f5cf0] flex items-center justify-center mb-6">

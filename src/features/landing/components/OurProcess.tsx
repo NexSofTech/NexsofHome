@@ -30,11 +30,11 @@ export function Services() {
   const t = useTranslations("services");
 
   return (
-    <section className="bg-white py-24 px-4 relative overflow-hidden" id="expertise">
+    <section className="bg-white py-24 px-4 relative" id="process">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start relative">
           {/* Left: title (Sticky) */}
-          <div className="md:col-span-4 relative md:sticky md:top-8 h-fit mb-12 md:mb-0">
+          <div className="md:col-span-4 relative md:sticky md:top-24 h-fit mb-12 md:mb-0">
             <h2
               className="text-[3.25rem] font-bold text-[#202029] leading-[1.1] mb-6 tracking-tight font-display"
             >
@@ -90,13 +90,13 @@ export function Services() {
             </h3>
             <p className="text-white/60 text-[0.9rem] leading-relaxed">{t("bannerDesc")}</p>
           </div>
-          <a
-            href="#contact"
+          <button
+            data-cal-link="nexsof.tech/30min"
             id="services-cta"
-            className="shrink-0 relative z-10 bg-gradient-to-r from-brand-pink to-brand-purple text-white font-semibold text-[0.9rem] px-8 py-3.5 rounded-full shadow-[0_4px_20px_rgba(168,85,247,0.45)] hover:shadow-[0_8px_30px_rgba(168,85,247,0.65)] hover:-translate-y-0.5 transition-all whitespace-nowrap"
+            className="cursor-pointer mr-20 shrink-0 relative z-10 bg-gradient-to-r from-brand-pink to-brand-purple text-white font-semibold text-[0.9rem] px-8 py-3.5 rounded-full shadow-[0_4px_20px_rgba(168,85,247,0.45)] hover:shadow-[0_8px_30px_rgba(168,85,247,0.65)] hover:-translate-y-0.5 transition-all whitespace-nowrap"
           >
             {t("bannerCta")}
-          </a>
+          </button>
         </div>
       </div>
     </section>

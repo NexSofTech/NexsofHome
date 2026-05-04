@@ -10,7 +10,7 @@ const testimonials = [
     date: "May 8, 2020",
     name: "Priya Sharma",
     role: "CEO",
-    photo: "https://picsum.photos/seed/priya/400/520",
+    photo: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=800&q=80",
     headline: "A Partner That Truly Understands Your Vision",
     body: "NEXSOF transformed our entire digital infrastructure from the ground up. From our very first discovery call, their team asked the right questions, understood our long-term goals, and delivered a product that exceeded every single expectation we had. Our platform has scaled seamlessly since launch, handling three times the projected user load without a single critical issue. If you are serious about building a real digital product, NEXSOF is the only team you need.",
   },
@@ -19,16 +19,16 @@ const testimonials = [
     date: "May 8, 2020",
     name: "Arjun Mehta",
     role: "Founder",
-    photo: "https://picsum.photos/seed/arjun/400/520",
+    photo: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=800&q=80",
     headline: "They Did Not Just Build Our App, They Helped Us Think",
     body: "Working with NEXSOF was genuinely the best decision we made during our startup journey. They did not just write code and hand us a product, they helped us think through the entire product strategy, user experience flow, and go-to-market approach. Their team challenged our assumptions in the best possible way and pushed us to build something far better than what we originally envisioned. We launched on time, within budget, and our early users absolutely love the product.",
   },
   {
     id: 3,
     date: "May 8, 2020",
-    name: "Sarah Collins",
+    name: "Anjali Gupta",
     role: "Head of Operations",
-    photo: "https://picsum.photos/seed/sarah/400/520",
+    photo: "https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=800&q=80",
     headline: "Technically Outstanding, Professionally Exceptional",
     body: "The team at NEXSOF is everything you could want in a technology partner, professional, deeply responsive, and technically outstanding at every level. We brought them a complex SaaS product with a tight timeline and high performance requirements. Not only did they deliver the platform on schedule, but the code quality, architecture, and documentation they handed over were among the best our in-house team has ever reviewed. Our platform has been running flawlessly ever since go-live.",
   },
@@ -53,7 +53,7 @@ export function Testimonials() {
   const tRight = testimonials[rightIdx];
 
   return (
-    <section className="bg-white pt-[72px] pb-[64px] overflow-hidden relative">
+    <section className="bg-white pt-[72px] pb-[64px] overflow-hidden relative" id="testimonials">
       {/* ── Header ── */}
       <motion.div 
         className="px-[5vw] pb-[52px]"

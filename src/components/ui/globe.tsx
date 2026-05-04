@@ -152,7 +152,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .hexPolygonsData(countries.features)
-      .hexPolygonResolution(3)
+      .hexPolygonResolution(2)
       .hexPolygonMargin(0.7)
       .showAtmosphere(defaultProps.showAtmosphere)
       .atmosphereColor(defaultProps.atmosphereColor)
@@ -238,7 +238,7 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
+    gl.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
   }, []);

@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Home",
-    "service": "Services",
-    "expertise": "Expertise",
-    "industries": "Industries",
-    "technologies": "Technologies",
-    "about": "About",
-    "blog": "Blog",
+    "services": "Services",
+    "process": "Process",
+    "technologies": "Tech",
+    "portfolio": "Work",
+    "team": "Team",
+    "testimonials": "Testimonials",
     "cta": "Connect Now"
   },
   "hero": {

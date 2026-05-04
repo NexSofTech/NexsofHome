@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 export function Conversion() {
   const t = useTranslations("conversion"); // We can use translations if needed later
@@ -98,9 +99,10 @@ export function Conversion() {
               className="flex flex-wrap items-center gap-5"
             >
               <motion.button 
+                data-cal-link="nexsof.tech/30min"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-linear-to-r from-[#d946ef] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3.5 rounded-xl shadow-lg hover:shadow-[0_8px_25px_rgba(217,70,239,0.3)] hover:-translate-y-0.5 transition-all"
+                className="cursor-pointer bg-linear-to-r from-[#d946ef] to-[#2563eb] text-white font-bold text-[0.95rem] px-8 py-3.5 rounded-xl shadow-lg hover:shadow-[0_8px_25px_rgba(217,70,239,0.3)] hover:-translate-y-0.5 transition-all"
               >
                 Get Started
               </motion.button>
@@ -135,11 +137,53 @@ export function Conversion() {
               
               {/* Phone Mockup */}
               <div className="relative z-30 w-[210px] h-[400px] bg-white rounded-[2.5rem] border-[10px] border-[#1f2023] shadow-2xl translate-y-16 shrink-0 flex justify-center overflow-hidden">
-                <img 
-                  src="/mob4.png" 
-                  alt="Mobile app preview" 
-                  className="w-full h-full object-cover"
-                />
+                <div className="w-full h-full flex flex-col items-center justify-center p-3 relative overflow-hidden bg-[#12001e]">
+                  {/* Flamboyant Animated Background */}
+                  <motion.div 
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    className="absolute inset-0 z-0 opacity-70"
+                  >
+                    <div className="absolute top-[-20%] left-[-20%] w-[140%] h-[140%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#d946ef_360deg)] rounded-full blur-[25px]" />
+                    <div className="absolute top-[-20%] left-[-20%] w-[140%] h-[140%] bg-[conic-gradient(from_180deg,transparent_0_300deg,#3b82f6_360deg)] rounded-full blur-[25px]" />
+                  </motion.div>
+
+                  <div className="relative z-10 flex flex-col gap-6 items-center w-full mt-6">
+                    <motion.h4 
+                      animate={{ scale: [1, 1.08, 1], filter: ["brightness(1)", "brightness(1.5)", "brightness(1)"] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="text-center font-black text-transparent bg-clip-text bg-gradient-to-r from-[#f4b7e8] via-[#d946ef] to-[#3b82f6] text-[1.3rem] leading-tight mb-2 font-display drop-shadow-md"
+                    >
+                      Get your app on
+                    </motion.h4>
+                    
+                    {/* App Store Badge */}
+                    <motion.div 
+                      animate={{ y: [0, -6, 0], rotateZ: [0, 1.5, -1.5, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                      className="w-[150px] flex items-center bg-black text-white px-3 py-2 rounded-[12px] shadow-[0_10px_35px_rgba(217,70,239,0.5)] border border-[#d946ef]/60 cursor-pointer"
+                    >
+                      <FaApple className="text-3xl mr-2 pb-1 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+                      <div className="flex flex-col items-start">
+                        <span className="text-[8px] uppercase leading-[1.2] text-gray-300">Download on the</span>
+                        <span className="text-[14px] font-semibold leading-[1.1]">App Store</span>
+                      </div>
+                    </motion.div>
+
+                    {/* Google Play Badge */}
+                    <motion.div 
+                      animate={{ y: [0, 6, 0], rotateZ: [0, -1.5, 1.5, 0] }}
+                      transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                      className="w-[150px] flex items-center bg-black text-white px-3 py-2 rounded-[12px] shadow-[0_10px_35px_rgba(59,130,246,0.5)] border border-[#3b82f6]/60 cursor-pointer"
+                    >
+                      <FaGooglePlay className="text-2xl mr-2 pb-0.5 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+                      <div className="flex flex-col items-start">
+                        <span className="text-[8px] uppercase leading-[1.2] text-gray-300">GET IT ON</span>
+                        <span className="text-[14px] font-semibold leading-[1.1]">Google Play</span>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
                 {/* Notch */}
                 <div className="w-[90px] h-[22px] bg-[#1f2023] rounded-b-[1rem] absolute top-0 z-40"></div>
               </div>

@@ -80,7 +80,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="w-full h-full flex-1 flex flex-col justify-end overflow-hidden relative" id="home">
+    <section className="w-full flex-1 flex flex-col overflow-hidden relative" id="home">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center bg-no-repeat z-0"
@@ -98,7 +98,7 @@ export function Hero() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-[2.5rem] md:text-[3.2rem] lg:text-[4rem] font-bold text-white font-display leading-[1.1] mb-4 md:mb-6"
+              className="text-[2.5rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.5rem] 2xl:text-[4rem] font-bold text-white font-display leading-[1.1] mb-4 md:mb-6"
             >
               Build Scalable <br />
               <span className="bg-linear-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
@@ -119,7 +119,7 @@ export function Hero() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-[1rem] md:text-[1.1rem] text-white/80 max-w-lg mb-6 md:mb-10 leading-relaxed"
+              className="text-[1rem] md:text-[1.1rem] lg:text-[1.05rem] xl:text-[1.1rem] text-white/80 max-w-lg mb-6 md:mb-10 leading-relaxed"
             >
               We deliver cutting-edge technology solutions to businesses across the globe. 
               No matter where you are located, our team is ready to scale your digital presence 
@@ -133,19 +133,19 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex gap-4"
             >
-              <motion.a 
-                href="#contact" 
+              <motion.button 
+                data-cal-link="nexsof.tech/30min"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-linear-to-r from-brand-pink to-brand-purple text-white px-6 py-3 md:px-8 md:py-3.5 rounded-full font-semibold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all"
+                className="cursor-pointer bg-linear-to-r from-brand-pink to-brand-purple text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-7 lg:py-3 xl:px-8 xl:py-3.5 rounded-full font-semibold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all"
               >
                 Work With Us
-              </motion.a>
+              </motion.button>
             </motion.div>
           </div>
           
           {/* Right Side: Globe */}
-          <div className="relative h-full min-h-[300px] lg:h-[500px] w-full z-10 flex items-center justify-center lg:translate-x-12">
+          <div className="relative h-full min-h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full z-10 flex items-center justify-center lg:translate-x-12">
             <div className="absolute w-[120%] h-[120%] md:w-[150%] md:h-[150%] left-[-10%] md:left-[-25%] top-[-10%] md:top-[-25%]">
               <World data={sampleArcs} globeConfig={globeConfig} />
             </div>
@@ -171,7 +171,7 @@ export function Hero() {
                     <img
                       src={logo.logoUrl}
                       alt={logo.name}
-                      className={`h-6 md:h-10 w-auto object-contain transition-all duration-400 hover:scale-110 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 ${logo.invert ? "brightness-0 invert" : ""}`}
+                      className={`h-6 md:h-8 xl:h-10 w-auto object-contain transition-all duration-400 hover:scale-110 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 ${logo.invert ? "brightness-0 invert" : ""}`}
                     />
                   </div>
                 ))}

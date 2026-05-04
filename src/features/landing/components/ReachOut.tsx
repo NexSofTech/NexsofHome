@@ -96,13 +96,13 @@ export function HeroContent() {
               </p>
 
               <div className="flex gap-4 flex-wrap mt-4">
-                <a
-                  href="#contact"
+                <button
+                  data-cal-link="nexsof.tech/30min"
                   id="hero-cta-primary"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-brand-pink to-brand-purple text-white text-[0.9rem] font-bold px-7 py-2.5 rounded-full shadow-[0_4px_24px_rgba(168,85,247,0.5)] hover:shadow-[0_8px_36px_rgba(168,85,247,0.65)] hover:-translate-y-0.5 transition-all"
+                  className="cursor-pointer inline-flex items-center justify-center bg-gradient-to-r from-brand-pink to-brand-purple text-white text-[0.9rem] font-bold px-7 py-2.5 rounded-full shadow-[0_4px_24px_rgba(168,85,247,0.5)] hover:shadow-[0_8px_36px_rgba(168,85,247,0.65)] hover:-translate-y-0.5 transition-all"
                 >
                   {t("ctaPrimary")}
-                </a>
+                </button>
                 <a
                   href={`tel:${t("ctaPhone")}`}
                   id="hero-cta-phone"
