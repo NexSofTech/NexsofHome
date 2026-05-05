@@ -1,5 +1,4 @@
 import { Outfit, Raleway } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -21,15 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html className={`${outfit.variable} ${raleway.variable}`}>
-      <body className="font-sans">
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-W5MD6QR81L`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5MD6QR81L"></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -39,6 +33,8 @@ export default function RootLayout({
             `,
           }}
         />
+      </head>
+      <body className="font-sans">
         {children}
       </body>
     </html>
