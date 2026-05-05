@@ -51,7 +51,7 @@ export function Footer() {
       <div
         className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(168, 85, 247, 0.15) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 100%)",
+          background: "radial-gradient(120% 100% at 50% -10%, rgba(168, 85, 247, 0.4) 0%, rgba(59, 130, 246, 0.1) 50%, transparent 100%)",
         }}
       />
 
@@ -165,7 +165,7 @@ export function Footer() {
             {/* 3 link columns */}
             {LINK_COLUMNS.map((col, ci) => (
               <div key={ci} className="flex flex-col gap-5">
-                <h4 className="text-[15px] font-bold text-white">{col.heading}</h4>
+                <h4 className="text-[15px] font-bo`zld text-white">{col.heading}</h4>
                 <ul className="flex flex-col gap-3">
                   {col.links.map((link, li) => (
                     <li key={li}>
