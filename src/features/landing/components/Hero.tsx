@@ -89,8 +89,8 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/70 bg-linear-to-b from-black/50 via-black/80 to-black z-10" />
 
       {/* Main Content Area */}
-      <div className="relative z-20 w-full flex-1 flex flex-col items-center justify-center pt-8 md:pt-16">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-6 px-6 lg:px-12 xl:px-20 h-[50vh] md:h-[60vh] lg:h-auto">
+      <div className="relative z-20 w-full flex-1 flex flex-col items-center justify-center pt-8 pb-6 md:pt-16 md:pb-0">
+        <div className="relative w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-6 px-6 py-8 min-h-[430px] max-[740px]:min-h-[360px] max-[740px]:py-5 lg:px-12 xl:px-20 md:h-[60vh] lg:h-auto">
           {/* Left Side: Text */}
           <div className="flex flex-col z-20">
             <motion.h2 
@@ -98,7 +98,7 @@ export function Hero() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-[2.5rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.5rem] 2xl:text-[4rem] font-bold text-white font-display leading-[1.1] mb-4 md:mb-6"
+              className="text-[2.5rem] max-[740px]:text-[2.15rem] max-[380px]:text-[1.95rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.5rem] 2xl:text-[4rem] font-bold text-white font-display leading-[1.1] mb-4 max-[740px]:mb-3 md:mb-6"
             >
               Build Scalable <br />
               <span className="bg-linear-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
@@ -111,7 +111,7 @@ export function Hero() {
               whileInView={{ opacity: 1, width: "6rem" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="h-[3px] md:h-[4px] bg-linear-to-r from-brand-pink via-brand-purple to-transparent mb-4 md:mb-6" 
+              className="h-[3px] md:h-[4px] bg-linear-to-r from-brand-pink via-brand-purple to-transparent mb-4 max-[740px]:mb-3 md:mb-6" 
             />
 
             <motion.p 
@@ -119,7 +119,7 @@ export function Hero() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-[1rem] md:text-[1.1rem] lg:text-[1.05rem] xl:text-[1.1rem] text-white/80 max-w-lg mb-6 md:mb-10 leading-relaxed"
+              className="text-[1rem] max-[740px]:text-[0.95rem] md:text-[1.1rem] lg:text-[1.05rem] xl:text-[1.1rem] text-white/80 max-w-lg mb-6 max-[740px]:mb-5 leading-relaxed max-[740px]:leading-[1.55] md:mb-10"
             >
               We deliver cutting-edge technology solutions to businesses across the globe. 
               No matter where you are located, our team is ready to scale your digital presence 
@@ -137,7 +137,7 @@ export function Hero() {
                 data-cal-link="nexsof.tech/30min"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="cursor-pointer bg-linear-to-r from-brand-pink to-brand-purple text-white px-6 py-3 md:px-8 md:py-3.5 lg:px-7 lg:py-3 xl:px-8 xl:py-3.5 rounded-full font-semibold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all"
+                className="cursor-pointer bg-linear-to-r from-brand-pink to-brand-purple text-white px-6 py-3 max-[740px]:px-5 max-[740px]:py-2.5 md:px-8 md:py-3.5 lg:px-7 lg:py-3 xl:px-8 xl:py-3.5 rounded-full font-semibold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all"
               >
                 Work With Us
               </motion.button>
@@ -145,8 +145,8 @@ export function Hero() {
           </div>
           
           {/* Right Side: Globe */}
-          <div className="relative h-full min-h-[300px] lg:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full z-10 flex items-center justify-center lg:translate-x-12">
-            <div className="absolute w-[120%] h-[120%] md:w-[150%] md:h-[150%] left-[-10%] md:left-[-25%] top-[-10%] md:top-[-25%]">
+          <div className="pointer-events-none absolute inset-x-0 bottom-[-210px] h-[320px] min-h-0 opacity-70 z-10 flex items-center justify-center md:bottom-[-260px] md:h-[420px] lg:pointer-events-auto lg:relative lg:inset-auto lg:h-[400px] lg:min-h-[300px] lg:w-full lg:opacity-100 lg:translate-x-12 xl:h-[450px] 2xl:h-[500px]">
+            <div className="absolute w-[125%] h-[125%] left-[-12%] top-[-10%] md:w-[150%] md:h-[150%] md:left-[-25%] md:top-[-25%]">
               <World data={sampleArcs} globeConfig={globeConfig} />
             </div>
           </div>
@@ -154,8 +154,8 @@ export function Hero() {
       </div>
 
       {/* Trusted By Logos */}
-      <div className="relative z-20 w-full mt-auto pb-8 md:pb-12 overflow-hidden shrink-0">
-        <p className="text-center text-[0.75rem] md:text-[0.85rem] font-bold tracking-[0.25em] text-white uppercase mb-6 md:mb-10 opacity-60">
+      <div className="relative z-20 w-full mt-auto pb-8 max-[740px]:pb-5 md:pb-12 overflow-hidden shrink-0">
+        <p className="text-center text-[0.75rem] max-[740px]:text-[0.68rem] md:text-[0.85rem] font-bold tracking-[0.25em] text-white uppercase mb-6 max-[740px]:mb-4 md:mb-10 opacity-60">
           We specialize in...
         </p>
         
